@@ -1,7 +1,9 @@
-import Cookies from 'js-cookie'
+import { ITokens, IAuthResponse } from '../../store/user/user.interface';
+import Cookies from 'js-cookie';
+
 
 export const seveTokensStorage = (data: ITokens) => {
-	Cookies.set('accessToken', data.access_token)
+	Cookies.set('accessToken', data.accessToken)
 	Cookies.set('refreshToken', data.refreshToken)
 }
 

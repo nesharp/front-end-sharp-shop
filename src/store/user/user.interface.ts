@@ -1,22 +1,22 @@
-// import {IUser} from "../../models/user.interface";
+import { IUser } from "../../interfaces/user.interfaces"
 
 export interface IUserState {
-    email: string
+	email: string
 }
 export interface ITokens {
-    accessToken: string
-    refreshToken: string
+	accessToken: string
+	refreshToken: string
 }
 export interface IInitialState {
-    user: IUserState | null
-    isLoading: boolean
+	user: IUserState | null
+	isLoading: boolean
 }
 export interface IEmailPassword {
-    email: string
-    password: string
+	email: string
+	password: string
 }
 export interface IAuthResponse {
-    user: IUser & {
-        isAdmin: boolean
-    }
+	user: IUser & {
+		isAdmin: boolean
+	}
 }
