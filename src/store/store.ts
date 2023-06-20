@@ -1,11 +1,9 @@
 import { carouselSlice } from './carousel/carousel.slice';
 import { cartSlice } from './cart/cart.slice';
-import { ICartItem } from '@/interfaces/cart.interface';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, persistReducer } from 'redux-persist';
 import persistStore from 'redux-persist/es/persistStore';
 import storage from 'redux-persist/lib/storage';
-import { TsConfigSourceFile } from 'typescript';
 
 
 const persistConfig = {
