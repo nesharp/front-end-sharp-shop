@@ -15,8 +15,6 @@ export interface IEmailPassword {
 	email: string
 	password: string
 }
-export interface IAuthResponse {
-	user: IUser & {
-		isAdmin: boolean
-	}
+export interface IAuthResponse extends ITokens {
+	user: IUser 
 }
