@@ -1,4 +1,5 @@
-import { IUser } from "../../interfaces/user.interfaces"
+import { IUser } from "../../interfaces/user.interfaces";
+
 
 export interface IUserState {
 	email: string
@@ -16,5 +17,5 @@ export interface IEmailPassword {
 	password: string
 }
 export interface IAuthResponse extends ITokens {
-	user: IUser 
+	user: IUser
 }

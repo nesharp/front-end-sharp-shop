@@ -25,6 +25,7 @@
     "react-dom": "18.2.0",
     "react-redux": "^8.1.1",
     "reacticons": "^0.0.1",
+    "redux-persist": "^6.0.0",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.3"
   },
