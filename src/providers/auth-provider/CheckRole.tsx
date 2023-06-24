@@ -1,20 +1,20 @@
-import { useAuth } from '@/hooks/useAuth'
 import { TypeComponentAuthFields } from '../auth-page.types'
-import { FC, PropsWithChildren } from 'react'
 import { useRouter } from 'next/router'
+import { FC, PropsWithChildren } from 'react'
+
+import { useAuth } from '@/hooks/useAuth'
 
 const CheckRole: FC<PropsWithChildren<TypeComponentAuthFields>> = (
-    { component: { isOnlySignedIn } },
-    children
+	{ Component: { isOnlySignedIn } },
+	children
 ) => {
-    const user = useAuth()
-    const router = useRouter()
-    if (isOnlySignedIn && user || !isOnlySignedIn) {
-        return <>{children}</>
-    }    
-    router.pathname !== '/auth' && router.push('/auth')
+	const user = useAuth()
+	const router = useRouter()
+	if ((isOnlySignedIn && user) || !isOnlySignedIn) {
+		return <>{children}</>
+	}
+	router.pathname !== '/auth' && router.push('/auth')
 
-    return null
-
+	return null
 }
 export default CheckRole
