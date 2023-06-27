@@ -6,6 +6,8 @@ import { PersistGate } from 'redux-persist/integration/react'
 import '@/assets/styles/globals.css'
 
 import { persistor, store } from '@/store/store'
+import { TypeComponentAuthFields } from '@/providers/auth-page.types'
+import AuthProvider from '@/providers/auth-provider/AuthProvider'
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -15,12 +17,14 @@ const queryClient = new QueryClient({
 	}
 })
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps & TypeComponentAuthFields) {
 	return (
 		<QueryClientProvider client={queryClient}>
 			<Provider store={store}>
 				<PersistGate persistor={persistor} loading={null}>
-					<Component {...pageProps} />
+					<AuthProvider Component={{isOnlySignedIn: Component.isOnlySignedIn}}>
+						<Component {...pageProps} />
+					</AuthProvider>
 				</PersistGate>
 			</Provider>
 		</QueryClientProvider>
