@@ -11,10 +11,10 @@ import { useAuth } from '@/hooks/useAuth'
 const DynamicCheckRole = dynamic(() => import('./CheckRole'), {
 	ssr: false
 })
-const AuthProvider: FC<PropsWithChildren<TypeComponentAuthFields>> = (
-	{ Component: { isOnlySignedIn } },
+const AuthProvider: FC<PropsWithChildren<TypeComponentAuthFields>> = ({
+	Component: { isOnlySignedIn },
 	children
-) => {
+}) => {
 	const { user } = useAuth()
 	const { checkAuth, logout } = useActions()
 	const { pathname } = useRouter()
