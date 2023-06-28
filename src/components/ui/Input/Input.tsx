@@ -5,14 +5,16 @@ import { FC, PropsWithChildren } from 'react'
 
 interface Props {
 	classNames?: string
-	type?: string
+	type?: 'password' | 'text'
 	autoComplete?: string
+	required?: boolean
 }
 
 const Input: FC<PropsWithChildren<Props>> = ({
 	classNames,
 	type,
 	autoComplete,
+	required,
 	children
 }) => {
 	const getIcon = (type: string) => {
@@ -53,6 +55,7 @@ const Input: FC<PropsWithChildren<Props>> = ({
 				autoComplete={autoComplete}
 				className={cn(styles.field__input, classNames)}
 				type={type}
+				required={required}
 			/>
 		</div>
 	)

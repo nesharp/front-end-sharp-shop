@@ -4,7 +4,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 gap: 0.5em;
-border-radius: 25px;
+border-radius: 10px;
 padding: 0.6em ;
 border: none;
 outline: none;
@@ -23,6 +23,11 @@ margin-bottom: 5px;
         background: none;
         width: 100%;
         color: $grey-color;
+        transition: 0.3s ease-in-out;
+        &:focus{
+            padding: 6px;
+        }
     }
+
     
 }
