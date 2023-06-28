@@ -1,22 +1,32 @@
-import styles from './Auth.module.scss'
-import { NextPage } from 'next'
-import { useRouter } from 'next/router'
-import { FormEvent } from 'react'
+import styles from './Auth.module.scss';
+import { NextPage } from 'next';
+import { useRouter } from 'next/router';
+import { FormEvent, FormEventHandler } from 'react';
 
-import DarkButton from '@/components/ui/DarkButton/DarkButton'
-import Input from '@/components/ui/Input/Input'
-import Meta from '@/components/ui/Meta'
 
-import { IEmailPassword } from '@/store/user/user.interface'
 
-import { useActions } from '@/hooks/useActions'
-import { useAuth } from '@/hooks/useAuth'
+import DarkButton from '@/components/ui/DarkButton/DarkButton';
+import Input from '@/components/ui/Input/Input';
+import Meta from '@/components/ui/Meta';
+
+
+
+import { IEmailPassword } from '@/store/user/user.interface';
+
+
+
+import { useActions } from '@/hooks/useActions';
+import { useAuth } from '@/hooks/useAuth';
+import { useAuthRedirect } from '@/hooks/useAuthRedirect';
+import Loader from '@/components/ui/Loader/Loader';
+
 
 const Auth: NextPage = () => {
 	const { isLoading } = useAuth()
 	const { login, register } = useActions()
 	const router = useRouter()
-	const submitHandler = (e: any) => {
+	useAuthRedirect()
+	const submitHandler = (e: FormEvent<HTMLFormElement> | any) => {
 		e.preventDefault()
 		const email = e.target[0].value
 		const password = e.target[1].value
@@ -24,20 +34,18 @@ const Auth: NextPage = () => {
 		const action = e.nativeEvent.submitter.value
 		if (action === 'Login') {
 			login(data)
-			router.push('/')
 		}
 		if (action === 'Register') {
 			register(data)
-			router.push('/')
 		}
 		if (action === 'Forgot Password') {
 			console.log('forgot password')
 		}
-		
 	}
 
 	return (
 		<Meta title='login'>
+			{isLoading && <Loader />}
 			<form
 				className={styles.form}
 				onSubmit={e => {
@@ -72,9 +80,10 @@ const Auth: NextPage = () => {
 					</div>
 					<DarkButton
 						type='submit'
-						disabled={false}
+						disabled={true}
 						size='medium'
 						className={styles.form__forgot}
+					
 					>
 						Forgot Password
 					</DarkButton>
