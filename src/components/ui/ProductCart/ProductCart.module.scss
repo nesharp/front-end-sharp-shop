@@ -1,0 +1,53 @@
+@import '~@/assets/styles/vars';
+.cart{
+    width: 250px;
+    height: 330px;
+    color: $grey-color;
+    background-color: $primary-color;
+    border-radius: 23px 23px 10px 10px;
+    overflow: hidden;
+    padding: 1% 18px 2% 18px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+   
+    .image{
+        width: 100%;
+        max-height: 60%;
+        object-fit:cover;
+        border-radius: 15px;
+        
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    h3{
+        font-size: 1.3em;
+        font-weight: 300;
+        line-height: .8;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        padding: 2px;
+        margin: 5px auto 0 auto;
+       
+    }
+    .button1{
+        background-color: transparent;
+        border: 1px solid $grey-color;
+        padding-left: 12px!important;
+        padding-right: 12px !important;
+        margin-right: 10px;
+        &:hover{
+            background-color: $grey-color;
+        }
+
+    }
+    .button2{
+        &:hover{
+            background-color: $blue-color;
+        }
+    }
+}

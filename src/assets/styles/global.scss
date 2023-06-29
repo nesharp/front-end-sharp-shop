@@ -11,10 +11,9 @@ body {
   padding: 0px;
   font-family: $main-font-family;
   color: $grey-color;
+    background-color: $black-color;
 }
-body{
-  background-color: $black-color;
-}
+
 *,
 *:before,
 *:after {

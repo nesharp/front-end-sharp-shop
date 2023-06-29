@@ -1,12 +1,7 @@
-import Loader from "@/components/ui/Loader/Loader";
 import { NextPage } from "next";
-
+import Home from '@/components/screens/Home/Home';
 const HomePage: NextPage = () => {
-  return <Loader />
-  // (
-  //   <div>
-  //     <h1>Home Page</h1>
-  //   </div>
-  // )
+  return <Home/>
+  
 }
 export default HomePage
