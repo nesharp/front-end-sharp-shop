@@ -17,7 +17,7 @@ const server_url = 'http://localhost:4200/api'
 class AuthSevice {
 	async main(type: 'login' | 'register', data: IEmailPassword) {
 		const response = await instance<IAuthResponse>({
-			url: server_url + `/auth/${type}`,
+			url:`/auth/${type}`,
 			method: 'POST',
 			data
 		})
