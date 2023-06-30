@@ -1,7 +1,7 @@
 import { instance } from "@/api/api.interceptor"
 import { IReview } from "@/interfaces/review.interface"
 
-class RewievService {
+class ReviewService {
 	async getAll() {
 		return instance<IReview[]>({
 			url: '/reviews',
@@ -22,4 +22,4 @@ class RewievService {
 		})
 	}
 }
-export default new RewievService()
+export default new ReviewService()

@@ -1,11 +1,12 @@
 import { NextPage } from "next";
-import process from "process";
-import { env } from "process";
+
 
 import Home from '@/components/screens/Home/Home';
+import { useProfile } from "@/hooks/useProfile";
 
 
 const HomePage: NextPage = () => {
+ 
   return <Home />
   
 }

@@ -3,7 +3,9 @@ import { NextPage } from 'next';
 
 
 
-import ProductCart from '@/components/ui/ProductCart/ProductCart';
+import ProductCard from '@/components/ui/ProductCard/ProductCard';
+import RatingLabel from '@/components/ui/RatingLabel/RatingLabel';
+import { test } from 'node:test';
 
 
 const testProduct: IProduct = {
@@ -37,7 +39,7 @@ const testProduct: IProduct = {
 }
 
 const Home: NextPage = () => {
-  return <ProductCart {...testProduct} />
+	return <ProductCard {...testProduct} />
 }
 
 export default Home

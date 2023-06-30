@@ -24,3 +24,4 @@ class UserSerivce{
         })
     }
 }
+export default new UserSerivce()
