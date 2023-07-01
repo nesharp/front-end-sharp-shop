@@ -1,10 +1,10 @@
 import { instance } from "@/api/api.interceptor"
-import { IProduct } from "@/interfaces/product.interface"
+import { IPaginationProducts, IProduct } from "@/interfaces/product.interface"
 import { IProductData, TypeDataFIlters } from "./product.interfaces"
 
 class ProductSevice {
 	async getAll(queryData = {} as TypeDataFIlters) {
-		return instance<IProduct[]>({
+		return instance<IPaginationProducts>({
 			url: '/products',
 			method: 'get',
 			params: queryData

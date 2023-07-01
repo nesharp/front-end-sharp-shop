@@ -27,7 +27,7 @@ class AuthSevice {
 		return response.data
 	}
 	async getNewTokens() {
-        const refreshToken = Cookies.get('refreshToken')
+		const refreshToken = Cookies.get('refreshToken')
 		const response = await axios.post<string, { data: IAuthResponse }>(
 			server_url + '/auth/login/access-token',
             { refreshToken },

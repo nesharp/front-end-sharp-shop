@@ -5,12 +5,10 @@
     color: $grey-color;
     background-color: $primary-color;
     border-radius: 23px 23px 10px 10px;
-    overflow: hidden;
-    padding: 1% 18px 2% 18px;
+    padding: 10px 18px 0 18px;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     position: relative;
-    
     .image{
         width: 100%;
         max-height: 60%;
@@ -20,11 +18,18 @@
     }
     h2{
         font-size: 1.5em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
-    h3{
+    p{
+        overflow: hidden;
         font-size: 1.3em;
         font-weight: 300;
         line-height: .8;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        
     }
     .buttons{
         display: flex;
@@ -32,7 +37,7 @@
         align-items: center;
         width: 80%;
         padding: 2px;
-        margin: 5px auto 0 auto;
+        margin: 20px auto 0 auto;
        
     }
     .button1{

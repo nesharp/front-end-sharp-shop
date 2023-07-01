@@ -1,45 +1,15 @@
-import { IProduct } from '@/interfaces/product.interface';
-import { NextPage } from 'next';
+import { IPaginationProducts, IProduct } from '@/interfaces/product.interface'
+import { NextPage } from 'next'
 
+import Catalog from '@/components/ui/Catalog/Catalog'
+import Layout from '@/components/ui/Layout/Layout'
 
-
-import ProductCard from '@/components/ui/ProductCard/ProductCard';
-import RatingLabel from '@/components/ui/RatingLabel/RatingLabel';
-import { test } from 'node:test';
-
-
-const testProduct: IProduct = {
-	id: 1,
-	name: 'Test Product',
-	description: 'This is a test product',
-	price: 100,
-	images: ['https://cdn.newtime.ua/upload/2023-01/Qz8FKVrX0ea8iLa.webp'],
-	slug: 'test-product',
-	category: {
-		id: 1,
-		name: 'Test Category',
-		slug: 'test-category'
-	},
-	createdAt: new Date(),
-	reviews: [
-		{
-			id: 1,
-			user: {
-				id: 1,
-				email: '',
-				name: '',
-				avatarPath: '',
-				phone: ''
-			},
-			text: 'This is a test review',
-			rating: 5,
-			createdAt: ''
-		}
-	]
-}
-
-const Home: NextPage = () => {
-	return <ProductCard {...testProduct} />
+const Home: NextPage<IPaginationProducts> = ({ products, length }) => {
+	return (
+		<Layout>
+			<Catalog products={products} title='Products' />
+		</Layout>
+	)
 }
 
 export default Home

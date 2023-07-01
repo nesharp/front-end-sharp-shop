@@ -12,12 +12,10 @@ const RatingLabel: FC<IProductDetails> = ({ product }) => {
 		() => ReviewService.getAverageRating(product.id),
 		{ select: ({ data }) => data }
 	)
-        console.log(data)
 	return (
 		<div className={style.rating}>
 			<AiFillStar />
 			<p>
-				
 				{data?.rating && !isLoading? (
 					data.rating
 				) : (

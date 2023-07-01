@@ -1,0 +1,47 @@
+.section{
+    h1{
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    width: 100%;
+    padding: 20px;
+    .products{
+        width: fit-content;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        overflow: scroll;
+        height: 76vh;
+        animation: bounce 1s 1 ease-in-out;
+    }
+}
+@keyframes bounce {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+
+@media screen and (max-width: 1200px){
+    section{
+        .products{
+            grid-template-columns: repeat(3, 1fr) !important;
+        }
+    }
+}
+@media screen and (max-width: 992px){
+    section{
+        .products{
+            
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+    }
+}
+    
+
+    

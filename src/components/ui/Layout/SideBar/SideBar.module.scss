@@ -1,0 +1,6 @@
+@import '~@/assets/styles/vars';
+.sidebar{
+    width: 200px;
+    height: calc(100vh - 70px);
+    border-right: 2px solid rgba($color: $grey-color, $alpha: 0.2);
+}
