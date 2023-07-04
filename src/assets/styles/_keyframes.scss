@@ -39,3 +39,13 @@
         transform: rotateY(360deg);
     }
 }
+@keyframes cartItem_animation {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}

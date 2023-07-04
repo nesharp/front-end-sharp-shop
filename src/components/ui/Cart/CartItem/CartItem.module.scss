@@ -1,4 +1,5 @@
 @import '~@/assets/styles/vars';
+@import '~@/assets/styles/keyframes';
 .item{
     width: 90%;
     margin: 10px auto;
@@ -9,6 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    animation: cartItem_animation .1s ease-out;
     >p{
         max-height: 100%;
         max-width: 50%;
@@ -27,5 +29,5 @@
             font-size: 1.4em;
         }
     }
-    
+
 }
