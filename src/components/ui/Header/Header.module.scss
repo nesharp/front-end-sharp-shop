@@ -2,10 +2,22 @@
 .header{
     height: 70px;
     border-bottom: 2px solid rgba($color: $grey-color, $alpha: 0.2);
-    padding: 0 40px;
+    padding: 0 10px 0 40px;
     align-items: center;
     display: flex;
     justify-content: space-between;
+    .right_part {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            img{
+               height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 1px solid $grey-color;
+            }
+    }
     .logo > a{
         font-size: 30px;
         font-weight: 700;
@@ -27,6 +39,7 @@
             padding: 2px 20px;
         }
     }
+        
 }
 @media screen and (max-width: 760px){
     .header{

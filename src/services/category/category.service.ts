@@ -4,10 +4,11 @@ import { instance } from '@/api/api.interceptor'
 
 class CategorySerivce {
 	async getAll() {
-		return instance<ICategory[]>({
+		const response = await instance<ICategory[]>({
 			url: '/category',
 			method: 'GET'
 		})
+		return response.data
 	}
 
 	async getById(id: string | number) {

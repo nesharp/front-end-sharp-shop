@@ -47,3 +47,13 @@ img {
 ::-webkit-scrollbar {
   width: 0px;
 }
+a{
+  text-decoration: none;
+  color: $grey-color;
+  &:hover{
+   cursor: pointer;
+  }
+  &:visited{
+    color: $grey-color;
+  }
+}

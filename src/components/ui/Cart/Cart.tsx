@@ -15,7 +15,7 @@ const Cart: FC = () => {
 	return (
 		<div className={style.cart}>
 			<AiOutlineShoppingCart
-				size={24}
+				size={28}
 				className={style.icon}
 				onClick={openCart}
 			/>

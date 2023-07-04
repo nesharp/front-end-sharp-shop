@@ -1,5 +1,5 @@
 // auth form animation
-@keyframes form-animate {
+@keyframes leftJump_animation {
     0% {
         transform: translateX(-500px);
     }
@@ -39,7 +39,7 @@
         transform: rotateY(360deg);
     }
 }
-@keyframes cartItem_animation {
+@keyframes scale_animation {
     0% {
         transform: scale(0);
     }

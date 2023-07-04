@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    animation: cartItem_animation .1s ease-out;
+    animation: scale_animation .1s ease-out;
     >p{
         max-height: 100%;
         max-width: 50%;
