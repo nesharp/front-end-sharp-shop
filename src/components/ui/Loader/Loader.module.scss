@@ -1,3 +1,4 @@
+@import '~@/assets/styles/keyframes';
 .pyramid_loader {
     position: absolute;
     width: 300px;
@@ -65,8 +66,3 @@
 
 
 
-@keyframes spin {
-    100% {
-        transform: rotateY(360deg);
-    }
-}

@@ -1,4 +1,6 @@
 @import '~@/assets/styles/vars';
+@import '~@/assets/styles/keyframes';
+
 .form{
     padding: 1.2em 1.8em 1.8em 1.8em;
     width: 80%;
@@ -33,19 +35,7 @@
         margin: 20px;
     }
 }
-@keyframes form-animate {
-    0%{
-        transform: translateX(-500px);
-        
-    }
-    70%{
-        transform: translateX(50px);
-    }
-    100%{
-        transform: translateX(0);
-        
-    }
-}
+
 @media screen and (max-width: 437px) {
     .form__submit, .form__forgot{
         margin-left: 0px !important;

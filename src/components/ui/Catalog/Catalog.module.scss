@@ -1,3 +1,4 @@
+@import '~@/assets/styles/keyframes';
 .section{
     h1{
         text-align: center;
@@ -14,18 +15,10 @@
         gap: 30px;
         overflow: scroll;
         height: 76vh;
-        animation: bounce 1s 1 ease-in-out;
+        animation: product_animation 1s 1 ease-in-out;
     }
 }
-@keyframes bounce {
-    0%{
-        transform: translateX(100%);
-    }
-    100%{
-        transform: translateX(0);
-    }
-    
-}
+
 
 @media screen and (max-width: 1200px){
     section{

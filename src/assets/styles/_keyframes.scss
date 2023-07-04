@@ -1,0 +1,41 @@
+// auth form animation
+@keyframes form-animate {
+    0% {
+        transform: translateX(-500px);
+    }
+
+    70% {
+        transform: translateX(50px);
+    }
+
+    100% {
+        transform: translateX(0);
+
+    }
+}
+// cart animation
+@keyframes cart_animation {
+    from {
+        transform: translateX(200%)
+    }
+
+    to {
+        transform: translateX(0)
+    }
+}
+@keyframes product_animation {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes spin {
+    100% {
+        transform: rotateY(360deg);
+    }
+}
