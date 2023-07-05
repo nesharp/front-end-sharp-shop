@@ -1,5 +1,6 @@
-import { instance } from "@/api/api.interceptor"
-import { IReview } from "@/interfaces/review.interface"
+import { IReview } from '@/interfaces/review.interface'
+
+import { instance } from '@/api/api.interceptor'
 
 class ReviewService {
 	async getAll() {

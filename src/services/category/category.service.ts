@@ -2,7 +2,7 @@ import { ICategory } from '@/interfaces/category.interface'
 
 import { instance } from '@/api/api.interceptor'
 
-class CategorySerivce {
+class CategoryService {
 	async getAll() {
 		const response = await instance<ICategory[]>({
 			url: '/category',
@@ -20,6 +20,7 @@ class CategorySerivce {
 	async getBySlug(slug: string) {
 		return instance<ICategory>({
 			url: `/category/slug/${slug}`,
+
 			method: 'GET'
 		})
 	}
@@ -35,13 +36,12 @@ class CategorySerivce {
 			method: 'PUT',
 			data: { name }
 		})
-    }
-    async delete(id: string | number) {
-        return instance<ICategory>({
-            url: `/category/${id}`,
-            method: 'DELETE'
-        })
-    }
-    
+	}
+	async delete(id: string | number) {
+		return instance<ICategory>({
+			url: `/category/${id}`,
+			method: 'DELETE'
+		})
+	}
 }
-export default new CategorySerivce()
+export default new CategoryService()

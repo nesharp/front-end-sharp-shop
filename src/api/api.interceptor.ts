@@ -2,7 +2,7 @@ import { errorCatch, getContentType } from './api.helper'
 import { getAccessToken, removeFromStorage } from '@/services/auth/auth.helper'
 import authService from '@/services/auth/auth.service'
 import axios from 'axios'
-import { config } from 'process'
+// import { config } from 'process'
 
 const server_url = 'http://localhost:4200/api'
 export const instance = axios.create({
@@ -11,6 +11,7 @@ export const instance = axios.create({
 })
 instance.interceptors.request.use(config => {
 	const accessToken = getAccessToken()
+
 	if (config && accessToken && config.headers) {
 		config.headers.Authorization = `Bearer ${accessToken}`
 	}
@@ -32,9 +33,9 @@ instance.interceptors.response.use(
 				await authService.getNewTokens()
 				return instance(originalRequest)
 			} catch (error) {
-				if(errorCatch(error) === 'jwt expired') {
+				if (errorCatch(error) === 'jwt expired') {
 					removeFromStorage()
-				}	
+				}
 			}
 		}
 		throw error

@@ -1,3 +1,4 @@
+
 import { instance } from "@/api/api.interceptor"
 import { IUser } from "@/interfaces/user.interfaces"
 
@@ -9,7 +10,8 @@ type TypeData = {
 	phone?: string
 }
 
-class UserSerivce{
+
+class UserService{
     async getProfile() {
         return instance<IUser>({
             url: '/user/profile',
@@ -24,4 +26,4 @@ class UserSerivce{
         })
     }
 }
-export default new UserSerivce()
+export default new UserService()

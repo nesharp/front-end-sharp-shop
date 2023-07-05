@@ -9,7 +9,7 @@ export const register = createAsyncThunk<IAuthResponse, IEmailPassword>(
 	'auth/register',
 	async (data, thunkApi) => {
 		try {
-			const response = await authService.main('register', data)
+			const response = authService.main('register', data)
 			return response
 		} catch (error) {
 			return thunkApi.rejectWithValue(error)
@@ -20,16 +20,18 @@ export const login = createAsyncThunk<IAuthResponse, IEmailPassword>(
 	'auth/login',
 	async (data, thunkApi) => {
 		try {
-            const response = await authService.main('login', data)
+			const response = authService.main('login', data)
 			return response
 		} catch (error) {
 			return thunkApi.rejectWithValue(error)
 		}
 	}
 )
+
 export const logout = createAsyncThunk('auth/logout', async () => {
 	removeFromStorage()
 })
+
 export const checkAuth = createAsyncThunk<IAuthResponse>(
 	'auth/checkAuth',
 	async (_, thunkApi) => {

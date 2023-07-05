@@ -1,3 +1,4 @@
+
 import { cartSlice } from "./cart/cart.slice";
 import { userSlice } from "./user/user.slice";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
@@ -32,6 +33,4 @@ export const store = configureStore({
 		})
 })
 export const persistor = persistStore(store)
-
-
 export type TypeRootState = ReturnType<typeof rootReducer>

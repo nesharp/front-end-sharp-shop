@@ -1,3 +1,4 @@
+
 import { instance } from '../../api/api.interceptor';
 import { saveToStorage } from './auth.helper';
 import axios from 'axios';
@@ -14,7 +15,7 @@ import { getContentType } from '@/api/api.helper';
 
 const server_url = 'http://localhost:4200/api'
 
-class AuthSevice {
+class AuthService {
 	async main(type: 'login' | 'register', data: IEmailPassword) {
 		const response = await instance<IAuthResponse>({
 			url:`/auth/${type}`,
@@ -41,4 +42,4 @@ class AuthSevice {
 		return response
 	}
 }
-export default new AuthSevice()
+export default new AuthService()
