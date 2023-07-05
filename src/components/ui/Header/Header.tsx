@@ -18,9 +18,9 @@ const Header: FC = () => {
 
 			<div className={style.right_part}>
 				<Cart />
-				<Link href={'/profile'}>
+				{/* <Link href={'/profile'}>
 					<img src="" alt="Me" />
-				</Link>
+				</Link> */}
 			</div>
 		</header>
 	)
