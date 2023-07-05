@@ -6,7 +6,10 @@ export enum EnumOrderStatus {
     PAYED = 'payed',
     SNIPPED = 'snipped',
     DELIVERED = 'delivered',
+<<<<<<< HEAD
 
+=======
+>>>>>>> new-brunch
 }
 export interface IOrder {
     id: number,

@@ -1,0 +1,23 @@
+@import '~@/assets/styles/vars';
+@import '~@/assets/styles/keyframes';
+.cart{
+    .icon{
+        color: $grey-color;
+        cursor: pointer;
+        
+    }
+    .cartItems{
+        background-color: rgba($color: $black-color, $alpha: 0.8);
+        padding: 20px;
+        height: 400px;
+        width: 300px;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        z-index: 100;
+        border-radius: 25px;
+        animation: cart_animation .3s ease-out;
+        overflow: scroll;
+        box-shadow: -1px -1px 1px rgba($color: $grey-color, $alpha: 0.5);
+    }
+}

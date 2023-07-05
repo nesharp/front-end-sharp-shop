@@ -1,0 +1,33 @@
+@import '~@/assets/styles/vars';
+@import '~@/assets/styles/keyframes';
+.item{
+    width: 90%;
+    margin: 10px auto;
+    background-color: rgba($color: #000000, $alpha: 1.0);
+    padding: 5px 10px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: scale_animation .1s ease-out;
+    >p{
+        max-height: 100%;
+        max-width: 50%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .input{
+        margin-left: 10px;
+        background-color: transparent;
+        color: $grey-color;
+        display: flex;
+        align-items: center;
+        >p{
+            margin: 0 3px;
+            font-size: 1.4em;
+        }
+    }
+
+}

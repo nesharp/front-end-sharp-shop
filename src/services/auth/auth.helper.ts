@@ -1,7 +1,11 @@
 import { IAuthResponse, ITokens } from '../../store/user/user.interface'
 import Cookies from 'js-cookie'
 
+<<<<<<< HEAD
 export const seveTokensStorage = (data: ITokens) => {
+=======
+const saveTokensStorage = (data: ITokens) => {
+>>>>>>> new-brunch
 	Cookies.set('accessToken', data.accessToken)
 	Cookies.set('refreshToken', data.refreshToken)
 }
@@ -12,7 +16,11 @@ export const removeFromStorage = () => {
 	localStorage.removeItem('user')
 }
 export const saveToStorage = (data: IAuthResponse) => {
+<<<<<<< HEAD
 	saveToStorage(data)
+=======
+	saveTokensStorage(data)
+>>>>>>> new-brunch
 	localStorage.setItem('user', JSON.stringify(data.user))
 }
 
@@ -22,5 +30,10 @@ export const getAccessToken = () => {
 }
 
 const getUserFromStorage = () => {
+<<<<<<< HEAD
 	return JSON.parse(localStorage.getItem('user') || '{}' )  
 }
+=======
+	return JSON.parse(localStorage.getItem('user') || '{}')
+}
+>>>>>>> new-brunch

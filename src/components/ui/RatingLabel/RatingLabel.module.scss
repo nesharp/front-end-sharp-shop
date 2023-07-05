@@ -1,0 +1,22 @@
+@import '~@/assets/styles/vars';
+.rating{
+    position: absolute;
+    height: 25px;
+    background-color: rgba($color: $black-color, $alpha: 0.6);
+    left: 75%;
+    top: 5%;
+    padding: 4px 8px;
+    border-radius: 7px;
+    display: flex;
+    p{
+        font-size: 1.3em;
+        font-family: $main-font-family;
+        color: $grey-color;
+        line-height: 10px;
+        width: 10px;
+        margin-left: 2px;
+        filter: opacity(100%);
+    }
+    
+    
+}

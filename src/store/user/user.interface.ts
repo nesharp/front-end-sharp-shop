@@ -1,4 +1,5 @@
-import { IUser } from "../../interfaces/user.interfaces"
+import { IUser } from "../../interfaces/user.interfaces";
+
 
 export interface IUserState {
 	email: string
@@ -17,4 +18,8 @@ export interface IEmailPassword {
 }
 export interface IAuthResponse extends ITokens {
 	user: IUser
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> new-brunch
