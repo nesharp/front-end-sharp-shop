@@ -10,10 +10,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
-<<<<<<< HEAD
     "@tanstack/react-query": "^4.29.14",
-=======
->>>>>>> new-brunch
     "@types/node": "20.3.1",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
@@ -29,20 +26,17 @@
     "postcss": "8.4.24",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-<<<<<<< HEAD
     "react-persist": "^1.0.2",
-    "react-redux": "^8.1.0",
+    
     "react-simple-star-rating": "^5.1.7",
-    "reacticons": "^0.0.1",
-    "redux-persist": "^6.0.0",
-    "sass": "^1.63.4",
-=======
+    
+    
+   
     "react-icons": "^4.10.1",
     "react-redux": "^8.1.1",
     "reacticons": "^0.0.1",
     "redux-persist": "^6.0.0",
     "sass": "^1.63.6",
->>>>>>> new-brunch
     "tailwindcss": "3.3.2",
     "typescript": "5.1.3"
   },
