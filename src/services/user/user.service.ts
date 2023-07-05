@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-import { IUser } from '@/interfaces/user.interfaces'
 
-import { instance } from '@/api/api.interceptor'
-=======
 import { instance } from "@/api/api.interceptor"
 import { IUser } from "@/interfaces/user.interfaces"
->>>>>>> new-brunch
 
 type TypeData = {
 	email: string
@@ -15,25 +10,8 @@ type TypeData = {
 	phone?: string
 }
 
-<<<<<<< HEAD
-class UserService {
-	async getProfile() {
-		return instance<IUser>({
-			url: '/users/profile',
-			method: 'get'
-		})
-	}
-	async updateProfile(data: TypeData) {
-		return instance<IUser>({
-			url: '/users/profile',
-			method: 'put',
-			data: data
-		})
-	}
-}
-export default new UserService()
-=======
-class UserSerivce{
+
+class UserService{
     async getProfile() {
         return instance<IUser>({
             url: '/user/profile',
@@ -48,5 +26,4 @@ class UserSerivce{
         })
     }
 }
-export default new UserSerivce()
->>>>>>> new-brunch
+export default new UserService()
