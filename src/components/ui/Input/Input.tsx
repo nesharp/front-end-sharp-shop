@@ -9,6 +9,7 @@ interface Props {
 	type?: 'password' | 'text'
 	autoComplete?: string
 	required?: boolean
+	onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
 }
 
 const Input: FC<PropsWithChildren<Props>> = ({
@@ -16,7 +17,8 @@ const Input: FC<PropsWithChildren<Props>> = ({
 	type,
 	autoComplete,
 	required,
-	children
+	children,
+	onKeyDown
 }) => {
 	const getIcon = (type: string) => {
 		if (type === 'password') {
@@ -57,6 +59,7 @@ const Input: FC<PropsWithChildren<Props>> = ({
 				className={cn(styles.field__input, classNames)}
 				type={type}
 				required={required}
+				onKeyDown={e => onKeyDown && onKeyDown(e)}
 			/>
 		</div>
 	)
