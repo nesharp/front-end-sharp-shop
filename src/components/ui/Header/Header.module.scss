@@ -7,9 +7,11 @@
     display: flex;
     justify-content: space-between;
     .right_part {
-            display: flex;
-            gap: 40px;
-            align-items: center;
+            // display: flex;
+            // gap: 40px;
+
+            // align-items: center;
+            position: relative;       
             padding-right: 40px;
             img{
                height: 40px;
@@ -17,6 +19,16 @@
                 border-radius: 50%;
                 object-fit: cover;
                 border: 1px solid $grey-color;
+            }
+            .quantity{
+                background-color: $secondary-color;
+                height: 8px;
+                width: 8px;
+                border-radius: 50%;
+                position: absolute;
+                top: 6px;
+                left: -7px;
+                filter: blur(3px);
             }
     }
     .logo > a{
@@ -40,6 +52,7 @@
             padding: 2px 20px;
         }
     }
+
         
 }
 @media screen and (max-width: 760px){

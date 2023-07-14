@@ -12,7 +12,7 @@ import { IAuthResponse, IEmailPassword } from '@/store/user/user.interface';
 import { getContentType } from '@/api/api.helper';
 
 
-const server_url = 'http://localhost:4200/api'
+const server_url ='http://ec2-16-170-219-154.eu-north-1.compute.amazonaws.com/api'
 
 class AuthSevice {
 	async main(type: 'login' | 'register', data: IEmailPassword) {

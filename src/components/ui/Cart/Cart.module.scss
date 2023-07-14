@@ -4,7 +4,9 @@
     .icon{
         color: $grey-color;
         cursor: pointer;
-        
+        position: absolute;
+        top: -14px;
+        right: 20px;       
     }
     .cartItems{
         background-color: rgba($color: $black-color, $alpha: 0.8);

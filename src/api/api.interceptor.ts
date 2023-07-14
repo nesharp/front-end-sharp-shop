@@ -1,10 +1,12 @@
-import { errorCatch, getContentType } from './api.helper'
-import { getAccessToken, removeFromStorage } from '@/services/auth/auth.helper'
-import authService from '@/services/auth/auth.service'
-import axios from 'axios'
-import { config } from 'process'
+import { errorCatch, getContentType } from './api.helper';
+import { getAccessToken, removeFromStorage } from '@/services/auth/auth.helper';
+import authService from '@/services/auth/auth.service';
+import axios from 'axios';
+import { config } from 'process';
 
-const server_url = 'http://localhost:4200/api'
+
+const server_url =
+	'http://ec2-16-170-219-154.eu-north-1.compute.amazonaws.com/api'
 export const instance = axios.create({
 	baseURL: server_url,
 	headers: getContentType()

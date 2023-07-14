@@ -21,7 +21,7 @@ const SearchPage: NextPage = () => {
 			<Layout>
 				<Catalog
 					products={products ? products.data.products : []}
-					title={`Search results for ${query.term as string}`}
+                    title={`Search results for ${query.term as string}`}
 				/>
 			</Layout>
 		</Meta>
