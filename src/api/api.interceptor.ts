@@ -1,12 +1,10 @@
-import { errorCatch, getContentType } from './api.helper';
-import { getAccessToken, removeFromStorage } from '@/services/auth/auth.helper';
-import authService from '@/services/auth/auth.service';
-import axios from 'axios';
-import { config } from 'process';
+import { errorCatch, getContentType } from './api.helper'
+import { getAccessToken, removeFromStorage } from '@/services/auth/auth.helper'
+import authService from '@/services/auth/auth.service'
+import axios from 'axios'
+import { config } from 'process'
 
-
-const server_url =
-	'http://ec2-16-170-219-154.eu-north-1.compute.amazonaws.com/api'
+const server_url = 'http://localhost:4200'
 export const instance = axios.create({
 	baseURL: server_url,
 	headers: getContentType()
@@ -34,9 +32,9 @@ instance.interceptors.response.use(
 				await authService.getNewTokens()
 				return instance(originalRequest)
 			} catch (error) {
-				if(errorCatch(error) === 'jwt expired') {
+				if (errorCatch(error) === 'jwt expired') {
 					removeFromStorage()
-				}	
+				}
 			}
 		}
 		throw error

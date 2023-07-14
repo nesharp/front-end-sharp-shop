@@ -1,23 +1,18 @@
-import { instance } from '../../api/api.interceptor';
-import { saveToStorage } from './auth.helper';
-import axios from 'axios';
-import Cookies from 'js-cookie';
+import { instance } from '../../api/api.interceptor'
+import { saveToStorage } from './auth.helper'
+import axios from 'axios'
+import Cookies from 'js-cookie'
 
+import { IAuthResponse, IEmailPassword } from '@/store/user/user.interface'
 
+import { getContentType } from '@/api/api.helper'
 
-import { IAuthResponse, IEmailPassword } from '@/store/user/user.interface';
-
-
-
-import { getContentType } from '@/api/api.helper';
-
-
-const server_url ='http://ec2-16-170-219-154.eu-north-1.compute.amazonaws.com/api'
+const server_url = 'http://localhost:4200'
 
 class AuthSevice {
 	async main(type: 'login' | 'register', data: IEmailPassword) {
 		const response = await instance<IAuthResponse>({
-			url:`/auth/${type}`,
+			url: `/auth/${type}`,
 			method: 'POST',
 			data
 		})
@@ -30,12 +25,11 @@ class AuthSevice {
 		const refreshToken = Cookies.get('refreshToken')
 		const response = await axios.post<string, { data: IAuthResponse }>(
 			server_url + '/auth/login/access-token',
-            { refreshToken },
-            { headers: getContentType() }
+			{ refreshToken },
+			{ headers: getContentType() }
 		)
-        
 
-        if (response.data.accessToken) {
+		if (response.data.accessToken) {
 			saveToStorage(response.data)
 		}
 		return response
