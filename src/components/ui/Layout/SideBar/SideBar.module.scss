@@ -1,5 +1,6 @@
 @import '~@/assets/styles/vars';
 @import '~@/assets/styles/keyframes';
+
 .sidebar{
     width: 200px;
     height: calc(100vh - 70px);
@@ -7,6 +8,9 @@
     padding: 20px;
     text-align: left;
     font-size: 20px;
+    overflow: scroll;
+    
+    
     >h4{
         font-size: 1.7em;
         font-weight: 400;

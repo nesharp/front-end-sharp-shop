@@ -10,10 +10,7 @@ const HomePage: NextPage<IPaginationProducts> = ({ products, length }) => {
 	return <Home products={products} length={length} />
 }
 export const getStaticProps: GetStaticProps<IPaginationProducts> = async () => {
-  const { data } = await productService.getAll({
-    page: 1,
-    perPage: 12
-  });
+  const { data } = await productService.getAll();
   return {
     props: data
   };

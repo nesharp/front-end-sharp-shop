@@ -7,7 +7,6 @@ import Link from 'next/link'
 import { FC } from 'react'
 
 const SideBar: FC = () => {
-	// const categories = categoryService.getAll()
 	const { data, error, isLoading } = useQuery(
 		['categories'],
 		categoryService.getAll
