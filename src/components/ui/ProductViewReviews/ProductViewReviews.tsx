@@ -12,7 +12,7 @@ const ProductViewReviews: FC<IReview[]> = reviews => {
 			<h3 className={styles.heading}>Reviews</h3>
 			<LeaveReviewItem />
 			{Object.keys(reviews).map(key => (
-				<ReviewItem {...reviews[+key]} />
+				<ReviewItem {...reviews[+key]} key={key}/>
 			))}
 		</div>
 	)
