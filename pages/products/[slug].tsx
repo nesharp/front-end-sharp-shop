@@ -1,16 +1,26 @@
 import { IProduct } from '@/interfaces/product.interface'
-import productService from '@/services/products/product.service';
-import { GetStaticPaths, NextPage } from 'next'
+import productService from '@/services/products/product.service'
+import { useQuery } from '@tanstack/react-query'
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import { useRouter } from 'next/router'
 
-const ProductPage: NextPage<{ product: IProduct; slug: string }> = ({
-	product,
-	slug
-}) => {
-	return <div>Hello product</div>
+import ProductView from '@/components/screens/Product/Product'
+import Layout from '@/components/ui/Layout/Layout'
+import Loader from '@/components/ui/Loader/Loader'
+
+const ProductPage: NextPage = () => {
+	const router = useRouter()
+	const { data, isLoading, error } = useQuery(
+		['product', router.query.slug],
+		() => productService.getBySlug(router.query.slug as string)
+	)
+	const product = data?.data as IProduct
+	return (
+		<div>
+			{error || isLoading ? <Loader /> : ''}
+			<Layout>{product ? <ProductView {...product} /> : ''}</Layout>
+		</div>
+	)
 }
-// export const getStaticPaths: GetStaticPaths = () => {
-//     const products = await productService.getAll()
-//     const slugs = products.map()
-//     return {paths: "", fallback: "blocking"}
-// }
+
 export default ProductPage

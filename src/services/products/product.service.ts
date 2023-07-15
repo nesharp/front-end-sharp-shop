@@ -1,3 +1,4 @@
+
 import { instance } from "@/api/api.interceptor"
 import { IPaginationProducts, IProduct } from "@/interfaces/product.interface"
 import { IProductData, TypeDataFIlters } from "./product.interfaces"

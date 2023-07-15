@@ -22,7 +22,6 @@ const ProductCard: FC<IProduct> = product => {
 		currentProduct
 			? removeFromCart({ id: currentProduct.id })
 			: addToCart({ product: product, quantity: 1, price })
-		console.log(items)
 	}
 	const buyProduct = () => {
 		router.push(`/products/${product.slug}`)

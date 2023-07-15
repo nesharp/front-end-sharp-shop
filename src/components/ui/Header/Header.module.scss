@@ -1,7 +1,7 @@
 @import "~@/assets/styles/vars";
 .header{
     height: 70px;
-    border-bottom: 2px solid rgba($color: $grey-color, $alpha: 0.2);
+    border-bottom: 2px solid $border-color;
     padding: 0 10px 0 40px;
     align-items: center;
     display: flex;
