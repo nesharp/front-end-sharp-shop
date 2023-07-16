@@ -1,12 +1,32 @@
 @import "~@/assets/styles/vars";
 .review__input{
     width: 95%;
+    // background-color: white;
     border-radius: 15px;
     min-height: 80px;
-    padding: 8px 12px;
+    padding: 8px 2%;
     background-color: $primary-color;
     margin: 0px auto;
-    >textarea{
-        
+    >.review__textarea{
+        background-color: rgba($color: $black_color, $alpha: 0.5);
+        width: 95%;
+        height: 100px;
+        margin: 0 auto;
+        resize: none;
+        border: none;
+        outline: none;
+        padding: 5px 10px;
+        font-size: 1.3em;
+        line-height: 1em;
+        font-weight: 100;
+        color: $grey_color;
+        margin-top: 10px;
+        border: 2px solid $border_color;
+        border-radius: 10px;
     }
+    .review__input__header{
+        display: flex;
+        justify-content: space-between;
+    }
+        
 }

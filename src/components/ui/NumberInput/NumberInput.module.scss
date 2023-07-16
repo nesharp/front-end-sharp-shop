@@ -1,0 +1,46 @@
+@import '~@/assets/styles/vars';
+.wrapper{
+    width: 80px;
+    height: 40px;
+    border: 2px solid $border_color;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5px;
+    gap: 2px;
+    background-color: $black-color;
+    &>input{
+        font-size: 1em;
+        text-align: center;
+        color: $grey-color;
+        background: transparent;
+        width: 100%;
+        border: none;
+        height: 100%;
+
+        border: none;
+        outline: none;
+    }
+    .value__changer{
+
+        &>div{
+            height: 12px;
+            cursor: pointer;
+            color: $grey-color;
+            &:first-child{
+                margin-bottom: 4px;
+            }
+            *{
+                border-radius: 4px;
+            }            
+        }
+    }
+
+
+
+    input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+}
