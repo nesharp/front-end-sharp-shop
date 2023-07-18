@@ -7,3 +7,7 @@ export interface IReview {
     text: string
     rating: number
 }
+export interface IReviewDto {
+    text: string
+    rating: number
+}

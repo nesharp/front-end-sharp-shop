@@ -4,15 +4,18 @@ import styles from './ProductViewReviews.module.scss'
 import { IReview } from '@/interfaces/review.interface'
 import { FC } from 'react'
 
-interface IProductViewReviews {}
+interface IProductViewReviews {
+	reviews: IReview[]
+	id: number
+}
 
-const ProductViewReviews: FC<IReview[]> = reviews => {
+const ProductViewReviews: FC<IProductViewReviews> = ({ reviews, id:productId }) => {
 	return (
 		<div className={styles.reviews}>
 			<h3 className={styles.heading}>Reviews</h3>
-			<LeaveReviewItem />
-			{Object.keys(reviews).map(key => (
-				<ReviewItem {...reviews[+key]} key={key}/>
+			<LeaveReviewItem id={productId} />
+			{Object.keys(reviews).reverse().map(key => (
+				<ReviewItem {...reviews[+key]}  key={key} />
 			))}
 		</div>
 	)

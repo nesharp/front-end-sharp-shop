@@ -12,7 +12,10 @@ const ProductPage: NextPage = () => {
 	const router = useRouter()
 	const { data, isLoading, error } = useQuery(
 		['product', router.query.slug],
-		() => productService.getBySlug(router.query.slug as string)
+		() => productService.getBySlug(router.query.slug as string),
+		{
+			refetchInterval: 1000
+		}
 	)
 	const product = data?.data as IProduct
 	return (

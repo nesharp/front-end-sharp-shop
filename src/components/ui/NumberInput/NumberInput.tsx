@@ -1,12 +1,14 @@
 import styles from './NumberInput.module.scss'
-import { FC, useState } from 'react'
+import { Dispatch, FC, SetStateAction, useState } from 'react'
 import { AiFillStar, AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 import { start } from 'repl'
 
-interface INumberInput {}
+interface INumberInput {
+	stars: number
+	setStars: Dispatch<SetStateAction<number>>
+}
 
-const NumberInput: FC<INumberInput> = ({}) => {
-	const [stars, setStars] = useState(0)
+const NumberInput: FC<INumberInput> = ({ stars, setStars }) => {
 	return (
 		<div className={styles.wrapper}>
 			<input
@@ -22,7 +24,7 @@ const NumberInput: FC<INumberInput> = ({}) => {
 					<AiOutlinePlus
 						size={14}
 						onClick={() => {
-							setStars(stars + 1)
+							stars < 5 && setStars(stars + 1)
 						}}
 					/>
 				</div>
@@ -30,7 +32,7 @@ const NumberInput: FC<INumberInput> = ({}) => {
 					<AiOutlineMinus
 						size={14}
 						onClick={() => {
-							setStars(stars - 1)
+							stars > 1 && setStars(stars - 1)
 						}}
 					/>
 				</div>

@@ -5,6 +5,7 @@ import { NextPage } from 'next'
 import ProductViewReviews from '@/components/ui/ProductViewReviews/ProductViewReviews'
 
 const ProductView: NextPage<IProduct> = ({
+	id,
 	name,
 	description,
 	price,
@@ -19,7 +20,7 @@ const ProductView: NextPage<IProduct> = ({
 					<div className={styles.slider}></div>
 				</div>
 				<div className={styles.reviews}>
-					<ProductViewReviews {...reviews} />
+					<ProductViewReviews reviews={reviews} id={id} />
 				</div>
 			</div>
 		</div>

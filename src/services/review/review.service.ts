@@ -1,5 +1,5 @@
 import { instance } from "@/api/api.interceptor"
-import { IReview } from "@/interfaces/review.interface"
+import { IReview, IReviewDto } from "@/interfaces/review.interface"
 
 class ReviewService {
 	async getAll() {
@@ -8,12 +8,14 @@ class ReviewService {
 			method: 'GET'
 		})
 	}
-	async leave(id: string | number, data: IReview) {
-		return instance<IReview[]>({
+	async leave(id: string | number, data: IReviewDto) {
+		
+		const response = instance<IReview[]>({
 			url: `/reviews/leave/${id}`,
 			method: 'post',
 			data: data
 		})
+		return response
 	}
 	async getAverageRating(id: number | string) {
 		return instance<number>({
