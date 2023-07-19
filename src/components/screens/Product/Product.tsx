@@ -1,8 +1,8 @@
 import styles from './Product.module.scss'
 import { IProduct } from '@/interfaces/product.interface'
 import { NextPage } from 'next'
-
 import ProductViewReviews from '@/components/ui/ProductViewReviews/ProductViewReviews'
+import Carousel from '@/components/ui/Carousel/Carousel'
 
 const ProductView: NextPage<IProduct> = ({
 	id,
@@ -17,7 +17,8 @@ const ProductView: NextPage<IProduct> = ({
 			<div className={styles.product_info}>
 				<div className={styles.general_info}>
 					<h2 className={styles.title}>{name}</h2>
-					<div className={styles.slider}></div>
+					<Carousel images={images}/>
+
 				</div>
 				<div className={styles.reviews}>
 					<ProductViewReviews reviews={reviews} id={id} />
