@@ -1,5 +1,12 @@
 import styles from './Carousel.module.scss'
-import { FC, useEffect, useRef, useState } from 'react'
+import {
+	DetailedHTMLProps,
+	FC,
+	ImgHTMLAttributes,
+	useEffect,
+	useRef,
+	useState
+} from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 
 interface ICarousel {
@@ -9,22 +16,20 @@ interface ICarousel {
 const Carousel: FC<ICarousel> = ({ images }) => {
 	const [id, setId] = useState(0)
 	const imageRef = useRef(null)
+	const wrapper = useRef<HTMLImageElement>(null)
 	const nextImage = () => {
-		if (id === images.length - 1) {
-			setId(0)
-			return
-		}
-		setId(id + 1)
+		wrapper.current!.innerHTML = ''
+		id === images.length - 1 ? setId(0) : setId(id + 1)
+		wrapper.current!.innerHTML = `<img src=${images[id]} ref=${imageRef} />`
 	}
 	const prevImage = () => {
-		if (id === 0) {
-			setId(images.length - 1)
-			return
-		}
-		setId(id - 1)
+		wrapper.current!.innerHTML = ''
+		id === 0 ? setId(images.length - 1) : setId(id - 1)
+		wrapper.current!.innerHTML = `<img src=${images[id]}/>`
 	}
-    useEffect(() => {
-    }, [id])
+	useEffect(() => {
+		wrapper.current!.innerHTML = `<img src=${images[0]}/>`
+	}, [])
 	return (
 		<div className={styles.carousel}>
 			<div className={styles.buttons}>
@@ -35,7 +40,7 @@ const Carousel: FC<ICarousel> = ({ images }) => {
 					<AiOutlineArrowRight onClick={nextImage} />
 				</button>
 			</div>
-			<img ref={imageRef} src={images ? images[id] : ''} alt='' />
+			<div ref={wrapper} className={styles.wrapper}></div>
 		</div>
 	)
 }

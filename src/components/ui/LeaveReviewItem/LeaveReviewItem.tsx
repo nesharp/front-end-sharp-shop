@@ -8,7 +8,7 @@ import axios from 'axios'
 import classNames from 'classnames'
 import { useRouter } from 'next/router'
 import { FC, useEffect, useState } from 'react'
-import { AiOutlineSend } from 'react-icons/ai'
+import { AiFillStar, AiOutlineSend } from 'react-icons/ai'
 
 import { useAuth } from '@/hooks/useAuth'
 
@@ -40,7 +40,7 @@ const LeaveReviewItem: FC<ILeaveReviewItem> = ({ id: productId }) => {
 	return (
 		<div className={styles.review__input}>
 			<div className={styles.review__input__header}>
-				<NumberInput stars={stars} setStars={setStars} />
+				<NumberInput number={stars} setNumber={setStars} image={<AiFillStar size={20} />} limited={true} />
 				<button
 					className={classNames(styles.button, !user && styles.disabled)}
 					onClick={() => {

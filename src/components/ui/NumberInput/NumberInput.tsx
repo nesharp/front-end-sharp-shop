@@ -1,22 +1,33 @@
 import styles from './NumberInput.module.scss'
+import classNames from 'classnames'
 import { Dispatch, FC, SetStateAction, useState } from 'react'
 import { AiFillStar, AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
+import { IconType } from 'react-icons/lib'
 import { start } from 'repl'
 
 interface INumberInput {
-	stars: number
-	setStars: Dispatch<SetStateAction<number>>
+	number: number
+	setNumber: Dispatch<SetStateAction<number>>
+	image?: JSX.Element
+	className?: string
+	limited?: boolean
 }
 
-const NumberInput: FC<INumberInput> = ({ stars, setStars }) => {
+const NumberInput: FC<INumberInput> = ({
+	number,
+	setNumber,
+	image,
+	className,
+	limited
+}) => {
 	return (
-		<div className={styles.wrapper}>
+		<div className={classNames(styles.wrapper, className)}>
 			<input
 				type='number'
 				className={styles.stars}
-				value={stars}
+				value={number}
 				onChange={e => {
-					setStars(+e.currentTarget.value)
+					setNumber(+e.currentTarget.value)
 				}}
 			/>
 			<div className={styles.value__changer}>
@@ -24,7 +35,9 @@ const NumberInput: FC<INumberInput> = ({ stars, setStars }) => {
 					<AiOutlinePlus
 						size={14}
 						onClick={() => {
-							stars < 5 && setStars(stars + 1)
+							limited
+								? number < 5 && setNumber(number + 1)
+								: setNumber(number + 1)
 						}}
 					/>
 				</div>
@@ -32,12 +45,12 @@ const NumberInput: FC<INumberInput> = ({ stars, setStars }) => {
 					<AiOutlineMinus
 						size={14}
 						onClick={() => {
-							stars > 1 && setStars(stars - 1)
+							number > 1 && setNumber(number - 1)
 						}}
 					/>
 				</div>
 			</div>
-			<AiFillStar className='star' size={30} />
+			<div className={styles.star}>{image && image}</div>
 		</div>
 	)
 }

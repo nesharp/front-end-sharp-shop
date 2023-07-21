@@ -9,7 +9,34 @@
                 max-height: calc(100vh - 70px);
                 overflow: scroll;
                 padding: 5% 2%;
-                
+                .description{
+                    background-color: $primary-color;
+                    width: 80%;
+                    margin: 0 auto;
+                    height: fit-content;
+                    border-radius: 15px;
+                    margin-top: 5px;
+                    .purchase__panel{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 10px 20px;
+                        .price{
+                            font-size: 1.5em;
+                            font-weight: 600;
+                        }
+                        .buttons{
+                            display: flex;
+                            gap: 5px;
+                            .button{
+                                border: 2px solid $border-color;
+                            }
+                            .quantity{
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
             }
             .title{
                 text-align: center;
@@ -30,5 +57,11 @@
 @media screen and (max-width: 1024px) {
     .product_info{
         display: block !important;
+        .reviews{
+            margin-top: 20px;
+            height: fit-content;
+            overflow: visible;
+        }
     }
+    
 }

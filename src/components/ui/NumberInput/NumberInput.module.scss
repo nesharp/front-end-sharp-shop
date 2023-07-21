@@ -10,6 +10,11 @@
     padding-right: 5px;
     gap: 2px;
     background-color: $black-color;
+    .star{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     &>input{
         font-size: 1em;
         text-align: center;
