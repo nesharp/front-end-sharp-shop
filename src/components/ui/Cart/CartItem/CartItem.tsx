@@ -1,12 +1,9 @@
-import style from './CartItem.module.scss';
-import { IProduct } from '@/interfaces/product.interface';
-import { FC } from 'react';
-import { AiOutlineMinusCircle, AiOutlinePlusCircle } from 'react-icons/ai';
+import style from './CartItem.module.scss'
+import { IProduct } from '@/interfaces/product.interface'
+import { FC } from 'react'
+import { AiOutlineMinusCircle, AiOutlinePlusCircle } from 'react-icons/ai'
 
-
-
-import { useActions } from '@/hooks/useActions';
-
+import { useActions } from '@/hooks/useActions'
 
 interface ICartItemProps {
 	product: IProduct
@@ -15,17 +12,16 @@ interface ICartItemProps {
 	id: number
 }
 
-
 const CartItem: FC<ICartItemProps> = ({ product, price, quantity, id }) => {
-    const { changeQuantity, removeFromCart } = useActions()
-    const addItems = () => {
-        changeQuantity({ id: id, type: 'increase' })
-    }
+	const { changeQuantity, removeFromCart } = useActions()
+	const addItems = () => {
+		changeQuantity({ id: id, type: 'increase' })
+	}
 	const removeItems = () => {
-        if (quantity === 1) {
-            removeFromCart({id})
-        }
-        quantity > 1 && changeQuantity({ id: id, type: 'decrease' })
+		if (quantity === 1) {
+			removeFromCart({ id })
+		}
+		quantity > 1 && changeQuantity({ id: id, type: 'decrease' })
 	}
 	return (
 		<div className={style.item}>
@@ -41,7 +37,7 @@ const CartItem: FC<ICartItemProps> = ({ product, price, quantity, id }) => {
 				<AiOutlinePlusCircle
 					style={{ cursor: 'pointer' }}
 					onClick={() => {
-                        addItems()
+						addItems()
 					}}
 				/>
 			</div>

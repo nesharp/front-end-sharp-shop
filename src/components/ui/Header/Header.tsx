@@ -1,8 +1,6 @@
-import Logo from '../../../public/images/default.png'
 import Cart from '../Cart/Cart'
 import Input from '../Input/Input'
 import style from './Header.module.scss'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
@@ -31,7 +29,9 @@ const Header: FC = () => {
 
 			<div className={style.right_part}>
 				<Cart />
-			 {items.length > 0 ? <div className={style.quantity}></div> : null}	
+				{items.length > 0 ? (
+					<div className={style.quantity}></div>
+				) : null}
 			</div>
 		</header>
 	)

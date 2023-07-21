@@ -2,18 +2,18 @@ $main-font-family: 'Darker Grotesque', sans-serif;
 $secondary-font: 'Ubuntu', sans-serif;
 $primary-font: 'Lato', sans-serif;
 
-
-
-
 // colors
 $black-color: #111111;
-$primary-color: #1C1C1E;
-$grey-color:#d3d3d3;
-$blue-color: #417ED4;
-$green-color: #0B9A55;
-$secondary-color: #FF9902;
+$primary-color: #1c1c1e;
+$grey-color: #d3d3d3;
+$blue-color: #417ed4;
+$green-color: #0b9a55;
+$secondary-color: #ff9902;
 $red-color: #bd0000;
 $primary-plus-color: #212121;
 
 // borders
-$border-color: rgba($color: $grey-color, $alpha: 0.2);
+$border-color: rgba(
+	$color: $grey-color,
+	$alpha: 0.2
+);

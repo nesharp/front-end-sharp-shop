@@ -1,12 +1,5 @@
 import styles from './Carousel.module.scss'
-import {
-	DetailedHTMLProps,
-	FC,
-	ImgHTMLAttributes,
-	useEffect,
-	useRef,
-	useState
-} from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 
 interface ICarousel {

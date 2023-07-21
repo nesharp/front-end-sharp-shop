@@ -1,5 +1,4 @@
-import { IUser } from "../../interfaces/user.interfaces";
-
+import { IUser } from '../../interfaces/user.interfaces'
 
 export interface IUserState {
 	email: string

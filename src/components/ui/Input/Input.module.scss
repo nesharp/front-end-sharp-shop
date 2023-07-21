@@ -1,36 +1,34 @@
 @import '~@/assets/styles/vars';
-.field{
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 0.5em;
-border-radius: 10px;
-padding: 0.6em ;
-border: none;
-outline: none;
-color: white;
-background-color: $primary-color;
-box-shadow: inset 2px 5px 10px rgb(27, 27, 27);
-margin-bottom: 5px;
-    .field__icon{
-        width: 1.3em;
-        height: 1.3em;
-        fill: white;
-    }
-    .field__input{
-        border: none;
-        outline: none;
-        background: none;
-        width: 100%;
-        color: $grey-color;
-        transition: 0.3s ease-in-out;
-        &:focus{
-            padding: 6px;
-        }
-        &:-webkit-autofill {
-            transition: all 5000s ease-in-out 0s;
-        }
-    }
-    
-    
+.field {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5em;
+	border-radius: 10px;
+	padding: 0.6em;
+	border: none;
+	outline: none;
+	color: white;
+	background-color: $primary-color;
+	box-shadow: inset 2px 5px 10px rgb(27, 27, 27);
+	margin-bottom: 5px;
+	.field__icon {
+		width: 1.3em;
+		height: 1.3em;
+		fill: white;
+	}
+	.field__input {
+		border: none;
+		outline: none;
+		background: none;
+		width: 100%;
+		color: $grey-color;
+		transition: 0.3s ease-in-out;
+		&:focus {
+			padding: 6px;
+		}
+		&:-webkit-autofill {
+			transition: all 5000s ease-in-out 0s;
+		}
+	}
 }

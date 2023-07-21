@@ -1,10 +1,6 @@
 import NumberInput from '../NumberInput/NumberInput'
 import styles from './LeaveReviewItem.module.scss'
-import { IReview } from '@/interfaces/review.interface'
 import reviewService from '@/services/review/review.service'
-import { useQuery } from '@tanstack/react-query'
-import { data } from 'autoprefixer'
-import axios from 'axios'
 import classNames from 'classnames'
 import { useRouter } from 'next/router'
 import { FC, useEffect, useState } from 'react'
@@ -24,7 +20,7 @@ const LeaveReviewItem: FC<ILeaveReviewItem> = ({ id: productId }) => {
 	}, [review])
 	const router = useRouter()
 	const { user } = useAuth()
-	
+
 	const leaveReview = async () => {
 		!user && router.push('/auth')
 		if (user) {
@@ -40,9 +36,17 @@ const LeaveReviewItem: FC<ILeaveReviewItem> = ({ id: productId }) => {
 	return (
 		<div className={styles.review__input}>
 			<div className={styles.review__input__header}>
-				<NumberInput number={stars} setNumber={setStars} image={<AiFillStar size={20} />} limited={true} />
+				<NumberInput
+					number={stars}
+					setNumber={setStars}
+					image={<AiFillStar size={20} />}
+					limited={true}
+				/>
 				<button
-					className={classNames(styles.button, !user && styles.disabled)}
+					className={classNames(
+						styles.button,
+						!user && styles.disabled
+					)}
 					onClick={() => {
 						leaveReview()
 					}}

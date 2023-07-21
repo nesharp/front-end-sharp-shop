@@ -1,5 +1,6 @@
-import { instance } from "@/api/api.interceptor"
-import { IReview, IReviewDto } from "@/interfaces/review.interface"
+import { IReview, IReviewDto } from '@/interfaces/review.interface'
+
+import { instance } from '@/api/api.interceptor'
 
 class ReviewService {
 	async getAll() {
@@ -9,7 +10,6 @@ class ReviewService {
 		})
 	}
 	async leave(id: string | number, data: IReviewDto) {
-		
 		const response = instance<IReview[]>({
 			url: `/reviews/leave/${id}`,
 			method: 'post',

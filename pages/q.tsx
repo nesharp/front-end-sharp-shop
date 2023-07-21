@@ -1,5 +1,5 @@
 import productService from '@/services/products/product.service'
-import { useQueries, useQuery } from '@tanstack/react-query'
+import { useQuery } from '@tanstack/react-query'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 
@@ -21,7 +21,7 @@ const SearchPage: NextPage = () => {
 			<Layout>
 				<Catalog
 					products={products ? products.data.products : []}
-                    title={`Search results for ${query.term as string}`}
+					title={`Search results for ${query.term as string}`}
 				/>
 			</Layout>
 		</Meta>

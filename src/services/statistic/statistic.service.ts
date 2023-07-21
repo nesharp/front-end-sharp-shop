@@ -1,5 +1,6 @@
-import { instance } from "@/api/api.interceptor"
-import { IStatistic } from "@/interfaces/statistic.interface"
+import { IStatistic } from '@/interfaces/statistic.interface'
+
+import { instance } from '@/api/api.interceptor'
 
 class StatisticService {
 	async getStatistic(id: number) {

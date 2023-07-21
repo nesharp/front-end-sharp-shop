@@ -26,7 +26,9 @@ export default function App({
 		<QueryClientProvider client={queryClient}>
 			<Provider store={store}>
 				<PersistGate loading={null} persistor={persistor}>
-					<AuthProvider Component={{ isOnlySignedIn: Component.isOnlySignedIn }}>
+					<AuthProvider
+						Component={{ isOnlySignedIn: Component.isOnlySignedIn }}
+					>
 						<Component {...pageProps} />
 					</AuthProvider>
 				</PersistGate>

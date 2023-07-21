@@ -5,8 +5,7 @@ import axios from 'axios'
 import { config } from 'process'
 
 // const server_url = 'http://localhost:4200'
-const server_url =
-	'http://ec2-16-16-72-254.eu-north-1.compute.amazonaws.com/api'
+const server_url = process.env.NEXT_PUBLIC_SERVER_URL
 export const instance = axios.create({
 	baseURL: server_url,
 	headers: getContentType()

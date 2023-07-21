@@ -1,4 +1,4 @@
-import { IPaginationProducts, IProduct } from '@/interfaces/product.interface'
+import { IPaginationProducts } from '@/interfaces/product.interface'
 import { NextPage } from 'next'
 
 import Catalog from '@/components/ui/Catalog/Catalog'

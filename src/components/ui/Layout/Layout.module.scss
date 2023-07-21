@@ -1,11 +1,11 @@
-.wrapper{
-    display: flex;
-    .main{
-        width: 100%;
-    }
+.wrapper {
+	display: flex;
+	.main {
+		width: 100%;
+	}
 }
 @media screen and (max-width: 1024px) {
-    .sidebar{
-        display: none;
-    }
+	.sidebar {
+		display: none;
+	}
 }

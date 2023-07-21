@@ -9,14 +9,19 @@ interface IProductViewReviews {
 	id: number
 }
 
-const ProductViewReviews: FC<IProductViewReviews> = ({ reviews, id:productId }) => {
+const ProductViewReviews: FC<IProductViewReviews> = ({
+	reviews,
+	id: productId
+}) => {
 	return (
 		<div className={styles.reviews}>
 			<h3 className={styles.heading}>Reviews</h3>
 			<LeaveReviewItem id={productId} />
-			{Object.keys(reviews).reverse().map(key => (
-				<ReviewItem {...reviews[+key]}  key={key} />
-			))}
+			{Object.keys(reviews)
+				.reverse()
+				.map(key => (
+					<ReviewItem {...reviews[+key]} key={key} />
+				))}
 		</div>
 	)
 }

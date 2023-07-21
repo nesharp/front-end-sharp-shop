@@ -35,13 +35,12 @@ class CategorySerivce {
 			method: 'PUT',
 			data: { name }
 		})
-    }
-    async delete(id: string | number) {
-        return instance<ICategory>({
-            url: `/category/${id}`,
-            method: 'DELETE'
-        })
-    }
-    
+	}
+	async delete(id: string | number) {
+		return instance<ICategory>({
+			url: `/category/${id}`,
+			method: 'DELETE'
+		})
+	}
 }
 export default new CategorySerivce()

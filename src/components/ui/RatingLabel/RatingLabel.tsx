@@ -7,7 +7,7 @@ import { AiFillStar, AiOutlineMinus } from 'react-icons/ai'
 
 const RatingLabel: FC<IProductDetails> = ({ product }) => {
 	// need to chane type of query
-    const { isLoading, data } = useQuery<any, {rating: number} >(
+	const { isLoading, data } = useQuery<any, { rating: number }>(
 		['reviews', product.id],
 		() => ReviewService.getAverageRating(product.id),
 		{ select: ({ data }) => data }
@@ -16,7 +16,7 @@ const RatingLabel: FC<IProductDetails> = ({ product }) => {
 		<div className={style.rating}>
 			<AiFillStar />
 			<p>
-				{data?.rating && !isLoading? (
+				{data?.rating && !isLoading ? (
 					data.rating
 				) : (
 					<AiOutlineMinus color='red' />

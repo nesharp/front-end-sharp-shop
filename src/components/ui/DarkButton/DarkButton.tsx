@@ -1,6 +1,6 @@
 import style from './DarkButton.module.scss'
 import cn from 'classnames'
-import { FC, FormEvent, PropsWithChildren } from 'react'
+import { FC, PropsWithChildren } from 'react'
 
 interface TypeProps {
 	className?: string

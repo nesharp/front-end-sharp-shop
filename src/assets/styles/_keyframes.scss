@@ -1,75 +1,70 @@
 // auth form animation
 @keyframes leftJump_animation {
-    0% {
-        transform: translateX(-500px);
-    }
+	0% {
+		transform: translateX(-500px);
+	}
 
-    70% {
-        transform: translateX(50px);
-    }
+	70% {
+		transform: translateX(50px);
+	}
 
-    100% {
-        transform: translateX(0);
-
-    }
+	100% {
+		transform: translateX(0);
+	}
 }
 // cart animation
 @keyframes rightJump_animation {
-    from {
-        transform: translateX(200%)
-    }
+	from {
+		transform: translateX(200%);
+	}
 
-    to {
-        transform: translateX(0)
-    }
+	to {
+		transform: translateX(0);
+	}
 }
 @keyframes product_animation {
-    0% {
-        transform: translateX(100%);
-    }
+	0% {
+		transform: translateX(100%);
+	}
 
-    100% {
-        transform: translateX(0);
-    }
-
+	100% {
+		transform: translateX(0);
+	}
 }
 
 @keyframes spin {
-    100% {
-        transform: rotateY(360deg);
-    }
+	100% {
+		transform: rotateY(360deg);
+	}
 }
 @keyframes scale_animation {
-    0% {
-        transform: scale(0);
-    }
+	0% {
+		transform: scale(0);
+	}
 
-    100% {
-        transform: scale(1);
-    }
-
+	100% {
+		transform: scale(1);
+	}
 }
 @keyframes carousel_animation {
-    0% {
-        transform: scale(0.4);
-        filter: blur(20px);
-    }
+	0% {
+		transform: scale(0.4);
+		filter: blur(20px);
+	}
 
-    100% {
-        transform: scale(1);
-        filter: blur(0px);   
-     }
-
+	100% {
+		transform: scale(1);
+		filter: blur(0px);
+	}
 }
 //loader animation
 @keyframes jump_animation {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
 
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-30px);
-    }
+	50% {
+		transform: translateY(-30px);
+	}
 }

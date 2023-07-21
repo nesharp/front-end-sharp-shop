@@ -1,5 +1,3 @@
-import ErrorPage from '../../../../../pages/error'
-import Loader from '../../Loader/Loader'
 import styles from './SideBar.module.scss'
 import categoryService from '@/services/category/category.service'
 import { useQuery } from '@tanstack/react-query'

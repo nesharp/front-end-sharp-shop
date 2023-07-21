@@ -1,33 +1,33 @@
-@import "~@/assets/styles/vars";
-@import "~@/assets/styles/keyframes";
-.item{
-    padding: 20px 10px;
-    background-color: $primary-color;
-    margin: 10px auto;
-    width: 95%;
-    border-radius: 0 25px 0 25px;
-    animation: 1 1s scale_animation;
-    .info{
-        display: flex;
-        width: 90%;
-        justify-content: space-between;
-        margin: 0 auto;
-        .rating{
-            display: flex;
-            align-items: center;
-            gap: 2px
-        }
-        .name{
-            font-size: 1.2em;
-        }
-    }
-    .date{
-        text-align: center;
-    }
-    .text{
-       font-size: 1.3em; 
-       line-height: 1em;
-       width: 90%;
-       margin: 10px auto 0 auto;
-    }
+@import '~@/assets/styles/vars';
+@import '~@/assets/styles/keyframes';
+.item {
+	padding: 20px 10px;
+	background-color: $primary-color;
+	margin: 10px auto;
+	width: 95%;
+	border-radius: 0 25px 0 25px;
+	animation: 1 1s scale_animation;
+	.info {
+		display: flex;
+		width: 90%;
+		justify-content: space-between;
+		margin: 0 auto;
+		.rating {
+			display: flex;
+			align-items: center;
+			gap: 2px;
+		}
+		.name {
+			font-size: 1.2em;
+		}
+	}
+	.date {
+		text-align: center;
+	}
+	.text {
+		font-size: 1.3em;
+		line-height: 1em;
+		width: 90%;
+		margin: 10px auto 0 auto;
+	}
 }

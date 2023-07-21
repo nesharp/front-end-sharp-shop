@@ -1,7 +1,5 @@
 import styles from './Input.module.scss'
 import cn from 'classnames'
-import { NextPage } from 'next'
-import { off } from 'process'
 import { FC, PropsWithChildren } from 'react'
 
 interface Props {

@@ -1,9 +1,7 @@
 import styles from './NumberInput.module.scss'
 import classNames from 'classnames'
 import { Dispatch, FC, SetStateAction, useState } from 'react'
-import { AiFillStar, AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
-import { IconType } from 'react-icons/lib'
-import { start } from 'repl'
+import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 
 interface INumberInput {
 	number: number

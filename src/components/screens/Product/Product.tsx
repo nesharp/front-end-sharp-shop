@@ -1,7 +1,7 @@
 import styles from './Product.module.scss'
 import { IProduct } from '@/interfaces/product.interface'
 import { NextPage } from 'next'
-import { use, useState } from 'react'
+import { useState } from 'react'
 import { MdDiscount } from 'react-icons/md'
 import { Rating } from 'react-simple-star-rating'
 

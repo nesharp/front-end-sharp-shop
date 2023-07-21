@@ -8,10 +8,11 @@ import Catalog from '@/components/ui/Catalog/Catalog'
 import Layout from '@/components/ui/Layout/Layout'
 import Meta from '@/components/ui/Meta'
 
-const CategoryPage: NextPage<{
+interface ICategoryPageProps {
 	products: IProduct[]
 	category: ICategory
-}> = ({ products, category }) => {
+}
+const CategoryPage: NextPage<ICategoryPageProps> = ({ products, category }) => {
 	return (
 		<Meta title={category.name}>
 			<Layout>

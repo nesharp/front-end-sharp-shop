@@ -1,25 +1,18 @@
-import styles from './Auth.module.scss';
-import { NextPage } from 'next';
-import { useRouter } from 'next/router';
-import { FormEvent, FormEventHandler } from 'react';
+import styles from './Auth.module.scss'
+import { NextPage } from 'next'
+import { useRouter } from 'next/router'
+import { FormEvent } from 'react'
 
+import DarkButton from '@/components/ui/DarkButton/DarkButton'
+import Input from '@/components/ui/Input/Input'
+import Loader from '@/components/ui/Loader/Loader'
+import Meta from '@/components/ui/Meta'
 
+import { IEmailPassword } from '@/store/user/user.interface'
 
-import DarkButton from '@/components/ui/DarkButton/DarkButton';
-import Input from '@/components/ui/Input/Input';
-import Meta from '@/components/ui/Meta';
-
-
-
-import { IEmailPassword } from '@/store/user/user.interface';
-
-
-
-import { useActions } from '@/hooks/useActions';
-import { useAuth } from '@/hooks/useAuth';
-import { useAuthRedirect } from '@/hooks/useAuthRedirect';
-import Loader from '@/components/ui/Loader/Loader';
-
+import { useActions } from '@/hooks/useActions'
+import { useAuth } from '@/hooks/useAuth'
+import { useAuthRedirect } from '@/hooks/useAuthRedirect'
 
 const Auth: NextPage = () => {
 	const { isLoading } = useAuth()
@@ -83,7 +76,6 @@ const Auth: NextPage = () => {
 						disabled={true}
 						size='medium'
 						className={styles.form__forgot}
-					
 					>
 						Forgot Password
 					</DarkButton>

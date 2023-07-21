@@ -1,5 +1,5 @@
-import { useTypedSelector } from "./useTypedSelector"
+import { useTypedSelector } from './useTypedSelector'
 
 export const useAuth = () => {
-    return useTypedSelector(state => state.user)
+	return useTypedSelector(state => state.user)
 }

@@ -2,10 +2,7 @@ import Loader from '../Loader/Loader'
 import ProductCard from '../ProductCard/ProductCard'
 import style from './Catalog.module.scss'
 import { IProduct } from '@/interfaces/product.interface'
-import { EnumProductSort } from '@/services/products/product.interfaces'
-import { FC, useState } from 'react'
-
-import { capitalize } from '@/utils/string-utils'
+import { FC } from 'react'
 
 interface ICatalogProps {
 	products: IProduct[]

@@ -8,8 +8,7 @@ import { IAuthResponse, IEmailPassword } from '@/store/user/user.interface'
 import { getContentType } from '@/api/api.helper'
 
 // const server_url = 'http://localhost:4200'
-const server_url =
-	'http://ec2-16-16-72-254.eu-north-1.compute.amazonaws.com/api'
+const server_url = process.env.NEXT_PUBLIC_SERVER_URL
 
 class AuthService {
 	async main(type: 'login' | 'register', data: IEmailPassword) {

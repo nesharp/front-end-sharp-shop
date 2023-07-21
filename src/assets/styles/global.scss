@@ -6,18 +6,18 @@
 @import './vars';
 
 body {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-  font-family: $main-font-family;
-  color: $grey-color;
-    background-color: $black-color;
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	font-family: $main-font-family;
+	color: $grey-color;
+	background-color: $black-color;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body,
@@ -30,33 +30,33 @@ h6,
 p,
 ol,
 ul {
-  margin: 0;
-  padding: 0;
-  font-family: $main-font-family;
+	margin: 0;
+	padding: 0;
+	font-family: $main-font-family;
 }
 
 ol,
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 ::-webkit-scrollbar {
-  width: 0px;
+	width: 0px;
 }
-a{
-  text-decoration: none;
-  color: $grey-color;
-  &:hover{
-   cursor: pointer;
-  }
-  &:visited{
-    color: $grey-color;
-  }
-  textarea{
-    font-family: $main-font-family;
-  }
+a {
+	text-decoration: none;
+	color: $grey-color;
+	&:hover {
+		cursor: pointer;
+	}
+	&:visited {
+		color: $grey-color;
+	}
+	textarea {
+		font-family: $main-font-family;
+	}
 }

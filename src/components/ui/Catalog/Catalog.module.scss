@@ -1,56 +1,51 @@
 @import '~@/assets/styles/keyframes';
 @import '~@/assets/styles/vars';
-.section{
-    h1{
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 10px;
-    }
-    width: 100%;
-    padding: 20px;
-    .products{
-        width: fit-content;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 30px;
-        overflow: scroll;
-        height: 76vh;
-        animation: product_animation 1s 1 ease-in-out;
-    }
-    .sort__item{
-        border: none;
-        outline: none;
-        background-color: #fff;
-        border-radius: 2px;
-        width: 80%;
-        height: 30px;
-        margin: 5px 10%;
-        background-color: $primary-plus-color;
-        color: $grey-color;
-        padding: 0 20px;
-        font-size: 1.2em;
-        text-align: center;
-        cursor: pointer;
-    }
+.section {
+	h1 {
+		text-align: center;
+		font-size: 2rem;
+		margin-bottom: 10px;
+	}
+	width: 100%;
+	padding: 20px;
+	.products {
+		width: fit-content;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 30px;
+		overflow: scroll;
+		height: 76vh;
+		animation: product_animation 1s 1 ease-in-out;
+	}
+	.sort__item {
+		border: none;
+		outline: none;
+		background-color: #fff;
+		border-radius: 2px;
+		width: 80%;
+		height: 30px;
+		margin: 5px 10%;
+		background-color: $primary-plus-color;
+		color: $grey-color;
+		padding: 0 20px;
+		font-size: 1.2em;
+		text-align: center;
+		cursor: pointer;
+	}
 }
 
-
-@media screen and (max-width: 1200px){
-    section{
-        .products{
-            grid-template-columns: repeat(3, 1fr) !important;
-        }
-    }
+@media screen and (max-width: 1200px) {
+	section {
+		.products {
+			grid-template-columns: repeat(3, 1fr) !important;
+		}
+	}
 }
-@media screen and (max-width: 992px){
-    section{
-        .products{
-            
-            grid-template-columns: repeat(2, 1fr) !important;
-        }
-    }
+@media screen and (max-width: 992px) {
+	section {
+		.products {
+			grid-template-columns: repeat(2, 1fr) !important;
+		}
+	}
 }
-    
-
-    

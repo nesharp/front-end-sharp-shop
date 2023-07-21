@@ -20,7 +20,7 @@ export const login = createAsyncThunk<IAuthResponse, IEmailPassword>(
 	'auth/login',
 	async (data, thunkApi) => {
 		try {
-            const response = await authService.main('login', data)
+			const response = await authService.main('login', data)
 			return response
 		} catch (error) {
 			return thunkApi.rejectWithValue(error)

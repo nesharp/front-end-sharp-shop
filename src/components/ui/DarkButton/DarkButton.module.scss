@@ -1,20 +1,19 @@
 @import '~@/assets/styles/vars';
-.button{
-    padding-top: 2px;
-    padding-bottom: 6px;
-    font-family: $main-font-family;
-    font-size: 1.2em;
-    color: $grey-color;
-    border: none;
-    outline: none;
-    border-radius: 7px;
-    cursor: pointer;
-    background-color: $primary-color;
-    transition: .3s ease-in-out;
-    text-align: center;  
-    &:hover{
-        background-color: $secondary-color;
-        color: $primary-color;
-    }     
-
+.button {
+	padding-top: 2px;
+	padding-bottom: 6px;
+	font-family: $main-font-family;
+	font-size: 1.2em;
+	color: $grey-color;
+	border: none;
+	outline: none;
+	border-radius: 7px;
+	cursor: pointer;
+	background-color: $primary-color;
+	transition: 0.3s ease-in-out;
+	text-align: center;
+	&:hover {
+		background-color: $secondary-color;
+		color: $primary-color;
+	}
 }

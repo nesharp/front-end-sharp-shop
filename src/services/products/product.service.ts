@@ -12,7 +12,6 @@ class ProductService {
 		})
 	}
 	async getSimilar(id: string | number) {
-		
 		return instance<IProduct[]>({
 			url: `/products/similar/${id}`,
 			method: 'get'
