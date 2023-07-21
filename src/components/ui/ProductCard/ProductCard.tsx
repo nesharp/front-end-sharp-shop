@@ -3,14 +3,11 @@ import RatingLabel from '../RatingLabel/RatingLabel'
 import styles from './ProductCard.module.scss'
 import { IProduct } from '@/interfaces/product.interface'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
-import { BsFillCartDashFill, BsFillCartPlusFill } from 'react-icons/bs'
 
 import { useActions } from '@/hooks/useActions'
 import { useCart } from '@/hooks/useCart'
-import { useTypedSelector } from '@/hooks/useTypedSelector'
 
 const ProductCard: FC<IProduct> = product => {
 	const { id, name, description, price, images } = product

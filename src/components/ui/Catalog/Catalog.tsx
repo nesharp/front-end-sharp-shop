@@ -2,7 +2,10 @@ import Loader from '../Loader/Loader'
 import ProductCard from '../ProductCard/ProductCard'
 import style from './Catalog.module.scss'
 import { IProduct } from '@/interfaces/product.interface'
-import { FC } from 'react'
+import { EnumProductSort } from '@/services/products/product.interfaces'
+import { FC, useState } from 'react'
+
+import { capitalize } from '@/utils/string-utils'
 
 interface ICatalogProps {
 	products: IProduct[]
@@ -15,7 +18,7 @@ const Catalog: FC<ICatalogProps> = ({
 	products,
 	isLoading,
 	title,
-	isPagination = false,
+	isPagination = false
 }) => {
 	isLoading && <Loader />
 	return (

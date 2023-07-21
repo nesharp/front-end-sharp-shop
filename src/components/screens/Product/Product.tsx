@@ -9,6 +9,7 @@ import Carousel from '@/components/ui/Carousel/Carousel'
 import DarkButton from '@/components/ui/DarkButton/DarkButton'
 import NumberInput from '@/components/ui/NumberInput/NumberInput'
 import ProductViewReviews from '@/components/ui/ProductViewReviews/ProductViewReviews'
+import SimilarProducts from '@/components/ui/SimilarProducts/SimilarProducts'
 
 import { useActions } from '@/hooks/useActions'
 import { useCart } from '@/hooks/useCart'
@@ -50,7 +51,7 @@ const ProductView: NextPage<IProduct> = ({
 				<div className={styles.general_info}>
 					<h2 className={styles.title}>{name}</h2>
 					<Carousel images={images} />
-					<div className={styles.description}>
+					<div className={styles.panel}>
 						<div className={styles.purchase__panel}>
 							<div>
 								<Rating
@@ -77,6 +78,14 @@ const ProductView: NextPage<IProduct> = ({
 								</DarkButton>
 							</div>
 						</div>
+					</div>
+					<div className={styles.description}>
+						<h3>Description</h3>
+						<p>{description}</p>
+					</div>
+					<div className={styles.similar}>
+						<h3>Similar products</h3>
+						<SimilarProducts id={id} />
 					</div>
 				</div>
 				<div className={styles.reviews}>

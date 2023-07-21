@@ -9,7 +9,7 @@
                 max-height: calc(100vh - 70px);
                 overflow: scroll;
                 padding: 5% 2%;
-                .description{
+                .panel{
                     background-color: $primary-color;
                     width: 80%;
                     margin: 0 auto;
@@ -37,6 +37,27 @@
                         }
                     }
                 }
+                .description{
+                    width: 80%;
+                    height: fit-content;
+                    margin: 0 auto;
+                    margin-top: 10px;
+                    border-radius: 15px;
+                    background-color: $primary-color;
+                    padding: 10px 20px;
+                    min-height: 120px;
+                    >h3{
+                        text-align: center;
+                        font-size: 1.7em;
+                        font-weight: 400;
+                    }
+                    >p{
+                        font-size: 1.2em;
+                        font-weight: 200;
+                        font-family: $secondary-font;
+                    }
+                }
+
             }
             .title{
                 text-align: center;
@@ -51,6 +72,22 @@
                 width: 100%;
                 max-height: calc(100vh - 70px); 
             }
+                        .similar {
+                            background-color: $primary-color;
+                            width: 80%;
+                            margin: 0 auto;
+                            border-radius: 15px;
+                            min-height: 100px;
+                            padding: 10px 20px;
+                            margin-top: 10px;
+            
+                            >h3 {
+                                text-align: center;
+                                font-size: 1.7em;
+                                font-weight: 400;
+                            }
+                        }
+            
     }
     
 }
@@ -64,4 +101,14 @@
         }
     }
     
+}
+@media screen and (max-width: 550px) {
+    .button{
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .purchase__panel{
+        flex-direction: column !important;
+        justify-content: left !important;
+    }
 }

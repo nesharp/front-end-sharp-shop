@@ -11,7 +11,7 @@ import { getContentType } from '@/api/api.helper'
 const server_url =
 	'http://ec2-16-16-72-254.eu-north-1.compute.amazonaws.com/api'
 
-class AuthSevice {
+class AuthService {
 	async main(type: 'login' | 'register', data: IEmailPassword) {
 		const response = await instance<IAuthResponse>({
 			url: `/auth/${type}`,
@@ -37,4 +37,4 @@ class AuthSevice {
 		return response
 	}
 }
-export default new AuthSevice()
+export default new AuthService()

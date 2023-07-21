@@ -1,0 +1,12 @@
+@import '~@/assets/styles/vars';
+.wrapper{
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    >div{
+        background-color: $primary-plus-color;
+        filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.5));
+    }
+}

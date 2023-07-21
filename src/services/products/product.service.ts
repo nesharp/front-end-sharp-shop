@@ -1,9 +1,9 @@
+import { IProductData, TypeDataFIlters } from './product.interfaces'
+import { IPaginationProducts, IProduct } from '@/interfaces/product.interface'
 
-import { instance } from "@/api/api.interceptor"
-import { IPaginationProducts, IProduct } from "@/interfaces/product.interface"
-import { IProductData, TypeDataFIlters } from "./product.interfaces"
+import { instance } from '@/api/api.interceptor'
 
-class ProductSevice {
+class ProductService {
 	async getAll(queryData = {} as TypeDataFIlters) {
 		return instance<IPaginationProducts>({
 			url: '/products',
@@ -12,6 +12,7 @@ class ProductSevice {
 		})
 	}
 	async getSimilar(id: string | number) {
+		
 		return instance<IProduct[]>({
 			url: `/products/similar/${id}`,
 			method: 'get'
@@ -56,4 +57,4 @@ class ProductSevice {
 		})
 	}
 }
-export default new ProductSevice()
+export default new ProductService()

@@ -1,7 +1,6 @@
-import style from './DarkButton.module.scss';
-import cn from 'classnames';
-import { FC, FormEvent, PropsWithChildren } from 'react';
-
+import style from './DarkButton.module.scss'
+import cn from 'classnames'
+import { FC, FormEvent, PropsWithChildren } from 'react'
 
 interface TypeProps {
 	className?: string
@@ -13,19 +12,25 @@ interface TypeProps {
 const DarkButton: FC<PropsWithChildren<TypeProps>> = ({
 	className,
 	disabled,
-    type,
+	type,
 	size,
 	onClick,
 	children
 }) => {
 	return (
 		<input
-            type={type}
-            className={cn(style.button, className)}
-            value={children?.toString()}
-            disabled={disabled}
-			style={size === 'small' ? { padding: "2px 1.8em 6px 1.8em" } : { width: '80%' }}
-			onClick={(e) => {onClick? onClick(e) : null}}
+			type={type}
+			className={cn(style.button, className)}
+			value={children?.toString()}
+			disabled={disabled}
+			style={
+				size === 'small'
+					? { padding: '2px 1.8em 6px 1.8em' }
+					: { width: '80%' }
+			}
+			onClick={e => {
+				onClick ? onClick(e) : null
+			}}
 		/>
 	)
 }
