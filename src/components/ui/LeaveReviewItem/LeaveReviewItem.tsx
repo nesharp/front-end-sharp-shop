@@ -28,9 +28,9 @@ const LeaveReviewItem: FC<ILeaveReviewItem> = ({ id: productId }) => {
 				rating: stars,
 				text: review
 			})
-
-			console.log(response.data)
 		}
+		stars !== 1 && setStars(1)
+		setReview('')
 	}
 
 	return (
