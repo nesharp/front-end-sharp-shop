@@ -15,9 +15,6 @@ interface ILeaveReviewItem {
 const LeaveReviewItem: FC<ILeaveReviewItem> = ({ id: productId }) => {
 	const [stars, setStars] = useState(1)
 	const [review, setReview] = useState('')
-	useEffect(() => {
-		console.log(review)
-	}, [review])
 	const router = useRouter()
 	const { user } = useAuth()
 

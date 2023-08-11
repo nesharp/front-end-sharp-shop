@@ -1,0 +1,52 @@
+@import '~@/assets/styles/vars';
+.wrapper{
+    border-radius: 7px;
+    .imagesWrapper{
+        .images{
+        min-height: 150px;
+        background-color: $black-color;
+        border-radius: 7px;
+        margin-bottom: 10px;
+        padding: 10px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        img{
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 7px;
+            border-radius: 10px;
+            background-color: $gray-color;
+            cursor: pointer;
+            }
+        }
+    }
+    .bottomInputs{
+        display: flex;
+        flex-direction: column;
+        .srcInput{
+            background-color: $black-color;
+            border: none;
+            outline: none;
+            padding: 8px 15px;
+            font-size: 1.1em;
+            border-radius: 15px;
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 15px;
+            color: $gray-color;
+        }
+        .submit{
+            padding: 15px;
+            background-color: $black-color;
+            color: $gray-color;
+            border: none;
+            width: 20%;
+            margin: 0 auto 20px auto;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+    }
+}

@@ -10,7 +10,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 	font-family: $main-font-family;
-	color: $grey-color;
+	color: $gray-color;
 	background-color: $black-color;
 }
 
@@ -49,12 +49,12 @@ img {
 }
 a {
 	text-decoration: none;
-	color: $grey-color;
+	color: $gray-color;
 	&:hover {
 		cursor: pointer;
 	}
 	&:visited {
-		color: $grey-color;
+		color: $gray-color;
 	}
 	textarea {
 		font-family: $main-font-family;

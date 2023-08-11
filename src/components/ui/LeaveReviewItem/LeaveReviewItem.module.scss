@@ -24,7 +24,7 @@
 		font-size: 1.1em;
 		line-height: 1em;
 		font-weight: 100;
-		color: $grey_color;
+		color: $gray-color;
 		margin-top: 10px;
 		border: 2px solid $border_color;
 		border-radius: 10px;
@@ -46,14 +46,14 @@
 			transition: all 0.5s ease-in-out;
 			&:hover {
 				background-color: $border_color;
-				border: 2px solid $grey-color;
+				border: 2px solid $gray-color;
 				.icon {
 					color: $green_color;
 				}
 			}
 			.icon {
 				transition: all 0.1s ease-in-out;
-				color: $grey_color;
+				color: $gray-color;
 			}
 		}
 		.disabled {
@@ -63,7 +63,7 @@
 				background-color: $black-color;
 				border: 2px solid $border_color;
 				.icon {
-					color: $grey_color;
+					color: $gray-color;
 				}
 			}
 		}

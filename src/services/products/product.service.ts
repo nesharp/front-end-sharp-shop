@@ -36,10 +36,11 @@ class ProductService {
 		})
 	}
 
-	async create() {
+	async create(data: IProductData) {
 		return instance<IProduct>({
 			url: '/products',
-			method: 'post'
+			method: 'post',
+			data		
 		})
 	}
 	async update(id: string | number, data: IProductData) {

@@ -23,6 +23,7 @@ const ProductCard: FC<IProduct> = product => {
 	const buyProduct = () => {
 		router.push(`/products/${product.slug}`)
 	}
+	console.log(product)
 	return (
 		<div className={styles.cart}>
 			<RatingLabel product={product} />

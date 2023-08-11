@@ -5,9 +5,13 @@ import { useEffect } from 'react'
 export const useAuthRedirect = () => {
 	const { user } = useAuth()
 	const { replace } = useRouter()
+	const router = useRouter()
 	useEffect(() => {
-		if (user) {
-			replace('/')
+		// if (user) {
+		// 	replace('/')
+		// }
+		if(user){
+			router.back()
 		}
 	}, [user])
 }

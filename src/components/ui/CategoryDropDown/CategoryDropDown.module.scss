@@ -1,0 +1,10 @@
+@import '~@/assets/styles/vars';
+.select{
+    padding: 5px 15px;
+    font-size: 1.3em;
+    background-color: $black-color;
+    color: $gray-color;
+    border: 2px solid $border-color;
+    cursor: pointer;
+    outline: none;
+}

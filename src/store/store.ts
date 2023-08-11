@@ -20,7 +20,7 @@ const rootReducer = combineReducers({
 const persistConfig = {
 	key: 'sharp-shop',
 	storage,
-	whitelist: ['cart']
+	whitelist: ['cart', 'user']
 }
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 export const store = configureStore({

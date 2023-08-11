@@ -1,0 +1,97 @@
+@import '~@/assets/styles/vars';
+.adminPageWrapper{
+    width: 80%;
+    min-height: calc(100vh - 60px);
+    margin: 0 auto;
+    h3{
+        text-align: center;
+        margin: 25px 0;
+        font-size: 2em;
+    }
+    .form{
+        width: 90%;
+        background-color: $primary-color;
+        height: fit-content;
+        margin: 0 auto;
+        border-radius: 20px;
+        padding: 10px 20px;
+        .inputs{
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            .firstLevelInputs{
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                
+                .name, .price {
+                        background-color: $black-color;
+                        border-radius: 6px;
+                        padding: 10px 20px;
+                        outline: none;
+                        border: none;
+                        font-size: 1.1em;
+                        margin-bottom: 20px;
+                        width: 49%;
+                        color: $gray-color;
+                }
+            }
+            .textArea{
+                background-color: $black-color;
+                border-radius: 6px;
+                padding: 5px 10px;
+                outline: none;
+                border: none;
+                font-size: 1.1em;
+                margin-bottom: 20px;
+                min-height: 100px;
+                resize: none;
+                font-family: $main-font-family;
+                color: $gray-color;
+            }
+        }
+        .buttons{
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+            gap: 20px;
+            button{
+                padding: 10px 20px;
+                border-radius: 6px;
+                border: none;
+                outline: none;
+                font-size: 1.1em;
+                cursor: pointer;
+                background-color: $black-color;
+                color: $gray-color;
+                transition: all 0.4s ease;
+            }
+            .submit:hover{
+                background-color: $green-color;
+                color: $black-color;
+            }
+            .cancel:hover{
+                background-color: $red-color;
+            }
+        }
+    }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            /* display: none; <- Crashes Chrome on hover */
+            -webkit-appearance: none;
+            margin: 0;
+            /* <-- Apparently some margin are still there even though it's hidden */
+        }
+}
+@media screen and (max-width: 500px) {
+    .firstLevelInputs{
+        flex-direction: column;
+        .name, .price {
+            width: 100% !important;
+        }
+        .name{
+            margin-bottom: 0px !important;
+        }
+    }
+}
+    

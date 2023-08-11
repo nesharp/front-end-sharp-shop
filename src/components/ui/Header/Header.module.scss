@@ -7,36 +7,39 @@
 	display: flex;
 	justify-content: space-between;
 	.right_part {
-		// display: flex;
-		// gap: 40px;
-
-		// align-items: center;
-		position: relative;
-		padding-right: 40px;
-		img {
-			height: 40px;
-			width: 40px;
-			border-radius: 50%;
-			object-fit: cover;
-			border: 1px solid $grey-color;
+		position: unset;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.cart{
+			position: relative;
+			.quantity {
+				background-color: $secondary-color;
+				height: 8px;
+				width: 8px;
+				border-radius: 50%;
+				position: absolute;
+				top: 10px;
+				right: 40px;
+				filter: blur(1px);
+			}
 		}
-		.quantity {
-			background-color: $secondary-color;
-			height: 8px;
-			width: 8px;
-			border-radius: 50%;
-			position: absolute;
-			top: 6px;
-			left: -7px;
-			filter: blur(3px);
+		.avatar{
+			img{
+				margin-top: 5px;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+			}
 		}
+		
 	}
 	.logo > a {
 		font-size: 30px;
 		font-weight: 700;
 		text-transform: uppercase;
 		text-decoration: none;
-		color: $grey-color;
+		color: $gray-color;
 	}
 	.nav {
 		font-size: 1.5em;
@@ -44,7 +47,7 @@
 		> a {
 			margin: 0 10px;
 			text-decoration: none;
-			color: $grey-color;
+			color: $gray-color;
 		}
 	}
 	.input {

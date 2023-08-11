@@ -18,7 +18,7 @@
 	& > input {
 		font-size: 1em;
 		text-align: center;
-		color: $grey-color;
+		color: $gray-color;
 		background: transparent;
 		width: 100%;
 		border: none;
@@ -32,7 +32,7 @@
 		& > div {
 			height: 12px;
 			cursor: pointer;
-			color: $grey-color;
+			color: $gray-color;
 			&:first-child {
 				margin-bottom: 4px;
 			}

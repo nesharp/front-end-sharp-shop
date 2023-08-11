@@ -5,7 +5,7 @@ $primary-font: 'Lato', sans-serif;
 // colors
 $black-color: #111111;
 $primary-color: #1c1c1e;
-$grey-color: #d3d3d3;
+$gray-color: #d3d3d3;
 $blue-color: #417ed4;
 $green-color: #0b9a55;
 $secondary-color: #ff9902;
@@ -14,6 +14,6 @@ $primary-plus-color: #212121;
 
 // borders
 $border-color: rgba(
-	$color: $grey-color,
+	$color: $gray-color,
 	$alpha: 0.2
 );
