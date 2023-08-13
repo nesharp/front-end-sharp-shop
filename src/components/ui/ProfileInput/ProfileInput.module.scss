@@ -1,0 +1,16 @@
+@import '~@/assets/styles/vars';
+.wrapper{
+    width: 100%;
+    input {
+        background-color: $black-color;
+            // border: none;
+        outline: none;
+        padding: 10px 20px;
+        margin: 10px 0;
+        border: 1px solid $border-color;
+        color: $gray-color;
+        font-size: 1.1em;
+        cursor: pointer;
+        width: 100%;
+    }
+}
