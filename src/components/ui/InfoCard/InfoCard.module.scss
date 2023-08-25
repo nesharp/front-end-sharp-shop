@@ -1,0 +1,47 @@
+@import '~@/assets/styles/vars';
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: $black-color;
+    width: fit-content;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+        background-color: $red-color;
+        .deleteButton{
+            opacity: 1;
+        }
+    }
+    
+    .contentWrapper{
+        padding: 10px;
+        &:hover{
+            filter: blur(2px);
+        }
+        img {
+            height: 150px;
+            width: 200px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+        }
+        
+        h5 {
+            font-size: 1.3em;
+            font-weight: 400;
+            max-width: 100%;
+            overflow: hidden;
+        }
+    }
+    .deleteButton{
+        position: absolute;
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+    }
+}

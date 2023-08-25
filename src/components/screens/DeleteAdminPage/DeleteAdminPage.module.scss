@@ -1,0 +1,15 @@
+.wrapper{
+    width: 80%;
+    margin: 0 auto;
+    h2{
+        text-align: center;
+        margin: 20px 0;
+        font-size: 2em;
+    }
+    .catalog{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+}

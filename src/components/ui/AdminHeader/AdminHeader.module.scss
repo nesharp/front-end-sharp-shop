@@ -1,0 +1,17 @@
+@import '~@/assets/styles/vars';
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;   
+    gap: 10px;
+    .btn{
+        font-size: 1.3em;
+        border: 1px solid $gray-color;
+        padding: 1px 10px;
+        border-radius: 15px;
+        background: none;
+        color: $gray-color;
+        cursor: pointer;
+    }
+}

@@ -10,7 +10,7 @@ import { InfinityInputs } from '@/components/ui/InfinityInputs/InfinityInputs'
 
 import { useAuth } from '@/hooks/useAuth'
 
-export const AdminPage: FC = () => {
+export const AddAdminPage: FC = () => {
 	const { user } = useAuth()
 	const router = useRouter()
 	const [name, setName] = useState<string>('')
